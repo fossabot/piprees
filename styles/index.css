@@ -23,6 +23,7 @@ body {
 }
 
 body {
+  overflow-x: hidden;
   background: #272822;
   color: #f8f8f2;
   font-family:
