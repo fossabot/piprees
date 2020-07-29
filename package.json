@@ -1,0 +1,38 @@
+{
+  "name": "piprees.dev",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint --fix .",
+    "lint:css": "stylelint --fix \"./**/*.css\""
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-preact": "^1.1.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "react-refresh": "^0.8.3",
+    "stylelint": "13.6.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "date-fns": "^2.15.0",
+    "@prefresh/next": "^0.3.0",
+    "next": "^9.5.0",
+    "preact": "^10.4.4",
+    "preact-render-to-string": "^5.1.9",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1"
+  }
+}
