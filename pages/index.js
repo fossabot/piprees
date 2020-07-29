@@ -10,6 +10,7 @@ export default function Index() {
       <Head>
         <title>Pip Rees | UI Designer & Front-End Developer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
       </Head>
       <Introduction />
       <CareerSummary />
