@@ -10,6 +10,7 @@ export default function Index() {
     <main>
       <Head>
         <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Pip Rees | UI Designer & Front-End Developer</title>
         <meta name="description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
