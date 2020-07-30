@@ -2,9 +2,9 @@ import Blocks from '../styles/blocks.module.css';
 
 export default function KeyKnowledgeAreas() {
   return (
-    <article class={Blocks.Container}>
+    <section class={Blocks.Container}>
       <div class={Blocks.Column}>
-        <h1 id="key-knowledge-areas">Key Knowledge Areas</h1>
+        <h2 id="key-knowledge-areas">Key Knowledge Areas</h2>
         <ul id="key-knowledge-areas-items">
           <li>JavaScript ES6+ & JS Frameworks</li>
           <li>Cross-Browser Development & Responsive Design</li>
@@ -19,6 +19,6 @@ export default function KeyKnowledgeAreas() {
           <li>Print & Mixed Media Design</li>
         </ul>
       </div>
-    </article>
+    </section>
   )
 }

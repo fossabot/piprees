@@ -7,9 +7,9 @@ export default function CareerSummary() {
   const graphicsDate = new Date('2015-08-01');
 
   return (
-    <article class={Blocks.Container}>
+    <section class={Blocks.Container}>
       <div class={Blocks.Column}>
-        <h1 id="career-summary">Career Summary</h1>
+        <h2 id="career-summary">Career Summary</h2>
         <ul id="career-summary-key-points">
           <li>{differenceInYears(now, graphicsDate)} years Industry Graphic & UI Design experience</li>
           <li>{differenceInYears(now, frontendDate)} years Professional Front-End Development experience</li>
@@ -22,6 +22,6 @@ export default function CareerSummary() {
           <p>Before that, I helped small business clients to create easy to manage websites using WordPress and got to flex both my design and development skills creating custom themes to their specifications.</p>
         </details>
       </div>
-    </article>
+    </section>
   )
 }

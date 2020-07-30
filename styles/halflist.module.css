@@ -1,0 +1,21 @@
+.HalfList {
+  display: inline-block;
+  width: 100%;
+}
+
+@media (min-width: 42em) {
+  .HalfList {
+    width: 50%;
+  }
+}
+
+@media print {
+  .HalfList {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .HalfList li {
+    list-style-type: none;
+  }
+}

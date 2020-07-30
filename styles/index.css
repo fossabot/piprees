@@ -7,7 +7,7 @@ html {
   font-size: 16px;
 }
 
-@media screen and (min-width: 42em) {
+@media (min-width: 42em) {
   html {
     font-size: 16px;
   }
@@ -25,21 +25,52 @@ body {
 body {
   overflow-x: hidden;
   max-width: 100%;
-  background: #272822;
-  color: #f8f8f2;
+  background: #f8f8f2;
+  color: #272822;
   font-family:
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    "Liberation Mono",
-    "Courier New",
-    monospace,
+    system,
+    -apple-system,
+    ".SFNSText-Regular",
+    "San Francisco",
+    "Roboto",
+    "Segoe UI",
+    "Helvetica Neue",
+    "Lucida Grande",
+    sans-serif,
     "Apple Color Emoji",
     "Segoe UI Emoji",
     "Segoe UI Symbol";
+  font-variant-ligatures: common-ligatures;
   font-size: 1rem;
   line-height: 1.618rem;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #f8f8f2;
+    color: #272822;
+  }
+}
+
+@media monochrome, (light-level: washed) {
+  body {
+    background: white;
+    color: #272822;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #272822;
+    color: #f8f8f2;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: #272822;
+  }
 }
 
 ::selection {
@@ -55,37 +86,130 @@ h5,
 h6,
 dt,
 th {
-  font-weight: 600;
+  font-weight: bold;
   line-height: 0.618em;
 }
 
 h1 {
+  font-size: 3em;
+}
+
+h2 {
   font-size: 1.8em;
 }
 
-article {
+h1 + p {
+  display: block;
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+@media print {
+  h1 + p::after {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    content: 'https://piprees.dev/';
+  }
+}
+
+em,
+q,
+blockquote,
+figcaption {
+  font-family:
+    "Palatino Linotype",
+    Palatino,
+    Palladio,
+    "URW Palladio L",
+    "Book Antiqua",
+    Baskerville,
+    "Bookman Old Style",
+    "Bitstream Charter",
+    "Nimbus Roman No9 L",
+    Garamond,
+    "Apple Garamond",
+    "ITC Garamond Narrow",
+    "New Century Schoolbook",
+    "Century Schoolbook",
+    "Century Schoolbook L",
+    Georgia,
+    serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-style: inherit;
+}
+
+code,
+abbr,
+kbd,
+dd,
+li,
+cite,
+dfn,
+pre,
+samp {
+  font-family:
+    Hack,
+    "DejaVu Sans Mono",
+    "Source Code Pro",
+    "Fira Code",
+    "Space Mono",
+    "Droid Sans Mono",
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-style: inherit;
+  font-weight: lighter;
+}
+
+article,
+section {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+@media print {
+  article,
+  section {
+    page-break-inside: avoid;
+  }
 }
 
 ul {
   margin: 0;
   padding-left: 0;
-  list-style-type: none;
   line-height: 48px;
 }
 
-@media screen and (min-width: 42em) {
+ul li {
+  list-style-type: none;
+}
+
+@media (min-width: 42em) {
   ul {
-    display: inline-block;
     padding-left: 1.2em;
+  }
+
+  ul li {
     list-style-type: disc;
-    min-width: 50%;
   }
 }
 
 a {
-  color: #f8f8f2;
+  color: #75715e;
+  text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-color: #75715e;
   text-decoration-thickness: 2px;
@@ -95,12 +219,101 @@ a {
   transition: text-decoration-color 0.2s ease-out, color 0.2s ease-out;
 }
 
+a:visited {
+  text-decoration-color: #ab9df2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  a {
+    color: #75715e;
+    text-decoration-color: #75715e;
+  }
+}
+
+@media monochrome, (light-level: washed) {
+  a {
+    color: #75715e;
+    text-decoration-color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #f8f8f2;
+    text-decoration-color: #75715e;
+  }
+}
+
+@media print {
+  a {
+    font-weight: bold;
+    color: #75715e;
+    text-decoration: none;
+  }
+
+  a::after {
+    display: block;
+    line-height: 1rem;
+    font-weight: normal;
+    font-size: 1rem;
+    font-style: normal;
+    letter-spacing: 1px;
+    content: attr(href);
+  }
+}
+
 a:hover,
 a:focus,
 a:focus-within {
-  font-weight: 600;
-  color: #78dce8;
-  text-decoration-color: #78dce8;
+  font-weight: bold;
+  color: #ab9df2;
+  text-decoration-color: #ab9df2;
+}
+
+@media (prefers-color-scheme: light) {
+  a:hover,
+  a:focus,
+  a:focus-within {
+    font-weight: bold;
+    color: #ab9df2;
+    text-decoration-color: #ab9df2;
+  }
+}
+
+@media monochrome, (light-level: washed) {
+  a:hover,
+  a:focus,
+  a:focus-within {
+    font-weight: bold;
+    color: #75715e;
+    text-decoration-color: #75715e;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a:hover,
+  a:focus,
+  a:focus-within {
+    font-weight: bold;
+    color: #78dce8;
+    text-decoration-color: #78dce8;
+  }
+}
+
+@media print {
+  a:hover,
+  a:focus,
+  a:focus-within {
+    font-weight: bold;
+    color: #75715e;
+    text-decoration-color: #75715e;
+  }
 }
 
 details {
@@ -116,8 +329,28 @@ details::after {
   content: '+ Expand';
 }
 
+@media print {
+  details::after {
+    content: none;
+  }
+}
+
 details[open]::after {
   content: '- Collapse';
+}
+
+@media print {
+  details[open]::after {
+    content: none;
+  }
+}
+
+@media print {
+  /* stylelint-disable-reason Feeling cute, might delete later idk. https://github.com/w3c/csswg-drafts/issues/2084#issuecomment-351177835 */
+  /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+  details::details-content {
+    display: contents;
+  }
 }
 
 details summary {
@@ -137,10 +370,40 @@ details summary::after {
   background: transparent;
 }
 
+@media print {
+  details summary::after {
+    content: none;
+  }
+}
+
 a:focus,
 details summary:focus,
 button:focus {
-  outline: 2px solid #ffd866;
+  outline: 2px solid #ff6188;
+}
+
+@media (prefers-color-scheme: dark) {
+  a:focus,
+  details summary:focus,
+  button:focus {
+    outline: 2px solid #ffd866;
+  }
+}
+
+@media print, monochrome, (light-level: washed) {
+  a:focus,
+  details summary:focus,
+  button:focus {
+    outline: 2px solid #75715e;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  a:focus,
+  details summary:focus,
+  button:focus {
+    outline: 2px solid #ff6188;
+  }
 }
 
 dl {
