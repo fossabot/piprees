@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <main>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Pip Rees | UI Designer & Front-End Developer</title>
         <meta name="description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
@@ -30,7 +30,15 @@ export default function Index() {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#a9dc76" />
-        <script type="text/javascript" async src="https://x.toastedanalytics.com/bundle.js" onLoad="window._TOASTED_ID='9a0e0776-a69c-4241-8d47-fd4b1877fbb2'" onError="console.warn('Toasted Analytics could not load')" />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+                window._TOASTED_ID="9a0e0776-a69c-4241-8d47-fd4b1877fbb2";
+              `,
+          }}
+        />
+        <script type="text/javascript" async src="https://x.toastedanalytics.com/bundle.js" />
       </Head>
       <Animation />
       <Introduction />
