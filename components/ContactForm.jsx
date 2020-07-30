@@ -2,6 +2,23 @@ import { useForm, ValidationError } from '@statickit/react';
 import useLocalStorage from '../hooks/useLocalStorage.js'
 import Styles from '../styles/contactform.module.css';
 
+const contactFormClickedStatus = {
+  email: false,
+  message: false,
+  button: false
+}
+
+function contactFormClicked(id) {
+  try {
+    if (contactFormClickedStatus[id] === false) {
+      contactFormClickedStatus[id] = true;
+      window.toastedAnalytics.emit('contactFormClicked', { id });
+    }
+  } catch (error) {
+    console.warn(error);
+  }
+}
+
 function ContactForm() {
   const [state, handleSubmit] = useForm("contactForm");
   const [submitted, handleSubmitted] = useLocalStorage('message_sent', false);
@@ -29,6 +46,7 @@ function ContactForm() {
         autoComplete="on"
         autoCapitalize="off"
         autoCorrect="off"
+        onClick={() => contactFormClicked('email')}
         required
       />
       <ValidationError
@@ -43,6 +61,7 @@ function ContactForm() {
         name="message"
         pattern="[^@\s]+"
         placeholder="Hi Pip! Well, if the coffee's first rate, then so is everything else..."
+        onClick={() => contactFormClicked('message')}
         required
       />
       <ValidationError
@@ -51,7 +70,7 @@ function ContactForm() {
         class={Styles.ContactFormValidationError}
         errors={state.errors}
       />
-      <button type="submit" disabled={state.submitting}>
+      <button type="submit" disabled={state.submitting} onClick={() => contactFormClicked('button')}>
         Send
       </button>
     </form>

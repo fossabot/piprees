@@ -1,6 +1,15 @@
 import Blocks from '../styles/blocks.module.css';
 import { differenceInYears } from 'date-fns'
 
+let summaryClickedStatus = false;
+
+function summaryClicked() {
+  if (summaryClickedStatus === false) {
+    summaryClickedStatus = true;
+    window.toastedAnalytics.emit('summaryClicked', { id: 'career-summary' });
+  }
+}
+
 export default function CareerSummary() {
   const now = Date.now();
   const frontendDate = new Date('2017-04-01');
@@ -15,7 +24,7 @@ export default function CareerSummary() {
           <li>{differenceInYears(now, frontendDate)} years Professional Front-End Development experience</li>
         </ul>
         <details>
-          <summary id="career-summary-current">
+          <summary id="career-summary-current" onClick={() => summaryClicked()}>
             At Cruise Nation, I work closely with management, marketing, and product teams to design, implement, and regularly ship web features, optimisations, and UI improvements to thousands of visitors every month across a wide range of browsers and devices as part of an award-winning digital team.
           </summary>
           <p>In my previous role at CDSM, I worked to tight deadlines for demanding clients like Hwb, Mitsubishi, and Boots to create bespoke, professional E-Learning experiences and admin dashboards. I was hired as a Graphic Designer, became an E-Learning UI designer, and worked my way up to Front-End Developer.</p>

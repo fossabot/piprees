@@ -33,9 +33,7 @@ export default function Index() {
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `
-                window._TOASTED_ID="9a0e0776-a69c-4241-8d47-fd4b1877fbb2";
-              `,
+            __html: `window._TOASTED_ID="9a0e0776-a69c-4241-8d47-fd4b1877fbb2";`,
           }}
         />
         <script type="text/javascript" async src="https://x.toastedanalytics.com/bundle.js" />
