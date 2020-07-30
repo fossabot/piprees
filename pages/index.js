@@ -11,6 +11,8 @@ export default function Index() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="dns-prefetch" href="https://cdn.toastedanalytics.com" />
+        <link rel="preconnect" href="https://cdn.toastedanalytics.com" />
         <title>Pip Rees | UI Designer & Front-End Developer</title>
         <meta name="description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
         <meta property="og:type" content="profile" />
