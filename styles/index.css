@@ -152,7 +152,9 @@ li,
 cite,
 dfn,
 pre,
-samp {
+samp,
+textarea,
+input {
   font-family:
     Hack,
     "DejaVu Sans Mono",

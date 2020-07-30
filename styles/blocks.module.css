@@ -1,6 +1,7 @@
 .Container {
   display: flex;
   width: calc(100% - 4rem);
+  flex-wrap: wrap;
   padding: 0;
   margin-left: auto;
   margin-right: auto;
@@ -18,4 +19,26 @@
 
 .Column {
   flex: 1;
+  width: 100%;
+}
+
+.ColumnHalf {
+  flex: 1;
+  min-width: 100%;
+}
+
+@media (min-width: 42em) {
+  .ColumnHalf {
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
+
+@media print {
+  .ColumnHalf {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
 }
