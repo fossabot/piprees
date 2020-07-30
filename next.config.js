@@ -7,6 +7,8 @@ const nextConfig = {
   generateInDevMode: true,
   workboxOpts: {
     swDest: 'static/service-worker.js',
+    skipWaiting: true,
+    clientsClaim: true,
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
@@ -14,7 +16,7 @@ const nextConfig = {
         options: {
           cacheName: 'https-calls',
           expiration: {
-            maxEntries: 3,
+            maxEntries: 20,
             maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
           },
           cacheableResponse: {
