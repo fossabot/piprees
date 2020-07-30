@@ -70,6 +70,15 @@
   }
 }
 
+.ContactForm label {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  }
+
 .ContactForm input {
   margin-top: 1rem;
   padding: 1rem;

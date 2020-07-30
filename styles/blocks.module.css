@@ -42,3 +42,13 @@
     max-width: 100%;
   }
 }
+
+@media (min-width: 42em) {
+  .ColumnHalf ul {
+    padding-left: 0;
+  }
+
+  .ColumnHalf ul li {
+    list-style-type: none;
+  }
+}

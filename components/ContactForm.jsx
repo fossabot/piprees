@@ -1,9 +1,13 @@
 import { useForm, ValidationError } from '@statickit/react';
+import useLocalStorage from '../hooks/useLocalStorage.js'
 import Styles from '../styles/contactform.module.css';
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("contactForm");
-  if (state.succeeded) {
+  const [submitted, handleSubmitted] = useLocalStorage('message_sent', false);
+
+  if (state.succeeded || !!submitted) {
+    handleSubmitted(true);
     return (
       <div class={Styles.ContactForm}>
         <h3>Thanks for the message!</h3>
@@ -15,12 +19,16 @@ function ContactForm() {
   return (
     <form class={Styles.ContactForm} onSubmit={handleSubmit}>
       <h3>Message me</h3>
+      <label htmlFor="email">Your Email Address</label>
       <input
         id="email"
         type="email"
         name="email"
         pattern="[^@\s]+@[^@\s]+"
         placeholder="your@email.here"
+        autoComplete="on"
+        autoCapitalize="off"
+        autoCorrect="off"
         required
       />
       <ValidationError
@@ -29,6 +37,7 @@ function ContactForm() {
         class={Styles.ContactFormValidationError}
         errors={state.errors}
       />
+      <label htmlFor="message">Your message</label>
       <textarea
         id="message"
         name="message"
