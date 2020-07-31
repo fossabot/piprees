@@ -3,6 +3,7 @@ import useLocalStorage from '../hooks/useLocalStorage.js'
 
 import { themeToggleClicked } from '../util/analytics.js';
 
+let hasThemeSet = false;
 export default function LightSwitchComponent() {
   const defaultIsDark = process.browser && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultIsDark ? 'dark' : 'light');
@@ -10,7 +11,8 @@ export default function LightSwitchComponent() {
   const themeIcon = themeIsDark ? '🌤️' : '🌖';
   const tbemeMode = themeIsDark ? 'light' : 'dark';
 
-  if (process.browser) {
+  if (process.browser && hasThemeSet === false) {
+    hasThemeSet = true;
     document.documentElement.classList.add(themeIsDark ? 'theme-light' : 'theme-dark');
     document.documentElement.classList.remove(!themeIsDark ? 'theme-light' : 'theme-dark');
   }
