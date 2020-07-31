@@ -3,7 +3,7 @@ import { differenceInYears } from 'date-fns'
 import Blocks from '../styles/blocks.module.css';
 import Summary from './Summary.jsx';
 
-export default function CareerSummary() {
+export default function CareerSummaryComponent() {
   const now = Date.now();
   const frontendDate = new Date('2017-04-01');
   const graphicsDate = new Date('2015-08-01');

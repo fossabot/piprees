@@ -32,6 +32,38 @@
   }
 }
 
+.theme-light {
+  --color-background: #f8f8f2;
+  --color-background-alt: #fff;
+  --color-text: #272822;
+  --color-selection: #ff6188;
+  --color-link: #75715e;
+  --color-header-active: #78dce8;
+  --color-link-visited: #ab9df2;
+  --color-link-active: #ab9df2;
+  --color-link-focus: #ff6188;
+  --color-button-clickable: #78dce8;
+  --color-button-active: #ff6188;
+  --color-button-border-clickable: #a9dc7600;
+  --color-button-border-active: #ff6188ff;
+}
+
+.theme-dark {
+  --color-background: #272822;
+  --color-background-alt: #373831;
+  --color-text: #f8f8f2;
+  --color-selection: #ff6188;
+  --color-link: #75715e;
+  --color-header-active: #ab9df2;
+  --color-link-visited: #ab9df2;
+  --color-link-active: #78dce8;
+  --color-link-focus: #ffd866;
+  --color-button-clickable: #a9dc76;
+  --color-button-active: #ffd866;
+  --color-button-border-clickable: #a9dc7600;
+  --color-button-border-active: #ffd866ff;
+}
+
 @media print, monochrome, (light-level: washed) {
   :root {
     --color-background: #fff;
@@ -65,6 +97,10 @@
     transition: none !important;
     animation: none !important;
   }
+}
+
+[tabindex=-1] {
+  outline: 2px solid transparent;
 }
 
 html {
@@ -113,6 +149,7 @@ body {
 ::selection {
   background: var(--color-selection);
   color: white;
+  transition: background-color 0.2s ease-out;
 }
 
 em,
@@ -191,7 +228,7 @@ section {
 
 a {
   outline: 2px solid transparent;
-  transition: outline 0.2s ease-out;
+  transition: outline 0.2s ease-out, color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 }
 
 a:focus {
@@ -244,7 +281,6 @@ h3 a {
   text-decoration-style: solid;
   text-decoration-color: transparent;
   text-decoration-thickness: 2px;
-  transition: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 }
 
 h1 a:hover,
@@ -309,7 +345,6 @@ ul li a {
   text-decoration-thickness: 2px;
   font-weight: normal;
   display: inline-block;
-  transition: text-decoration-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 ul li a:visited {

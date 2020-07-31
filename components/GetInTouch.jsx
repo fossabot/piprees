@@ -2,7 +2,7 @@ import Blocks from '../styles/blocks.module.css';
 import { linkClicked } from '../util/analytics.js'
 import ContactForm from './ContactForm.jsx';
 
-export default function GetInTouch() {
+export default function GetInTouchComponent() {
   return (
     <>
       <section class={Blocks.Container}>

@@ -1,9 +1,10 @@
+import LightSwitch from '../components/LightSwitch.jsx'
 import Animation from '../components/Animation.jsx'
 import Introduction from '../components/Introduction.jsx'
 import CareerSummary from '../components/CareerSummary.jsx'
 import KeyKnowledgeAreas from '../components/KeyKnowledgeAreas.jsx'
 import GetInTouch from '../components/GetInTouch.jsx'
-import Outro from '../components/Outro.jsx'
+import Footer from '../components/Footer.jsx'
 import Head from 'next/head'
 
 export default function Index() {
@@ -43,10 +44,11 @@ export default function Index() {
       </Head>
       <Animation />
       <Introduction />
+      <LightSwitch />
       <CareerSummary />
       <KeyKnowledgeAreas />
       <GetInTouch />
-      <Outro />
+      <Footer />
     </main>
   )
 }

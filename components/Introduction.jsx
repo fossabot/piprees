@@ -1,7 +1,7 @@
 import Blocks from '../styles/blocks.module.css';
 import Summary from './Summary.jsx';
 
-export default function Introduction() {
+export default function IntroductionComponent() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>

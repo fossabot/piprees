@@ -1,6 +1,6 @@
 import Blocks from '../styles/blocks.module.css';
 
-export default function KeyKnowledgeAreas() {
+export default function KeyKnowledgeAreasComponent() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>

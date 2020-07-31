@@ -6,6 +6,11 @@ const contactFormClickedStatus = {
 
 const summaryClickedStatus = {};
 
+const themeToggleClickedStatus = {
+  light: false,
+  dark: false
+};
+
 export function contactFormClicked(id) {
   try {
     if (contactFormClickedStatus[id] === false) {
@@ -29,5 +34,12 @@ export function summaryClicked(id) {
   if (summaryClickedStatus[id] == null) {
     summaryClickedStatus[id] = true;
     window.toastedAnalytics.emit('summaryClicked', { id });
+  }
+}
+
+export function themeToggleClicked(mode) {
+  if (themeToggleClickedStatus[mode] == null) {
+    themeToggleClickedStatus[mode] = true;
+    window.toastedAnalytics.emit('themeToggleClicked', { mode });
   }
 }
