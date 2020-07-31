@@ -1,6 +1,70 @@
+:root {
+  --color-background: #f8f8f2;
+  --color-background-alt: #fff;
+  --color-text: #272822;
+  --color-selection: #ff6188;
+  --color-link: #75715e;
+  --color-header-active: #78dce8;
+  --color-link-visited: #ab9df2;
+  --color-link-active: #ab9df2;
+  --color-link-focus: #ff6188;
+  --color-button-clickable: #78dce8;
+  --color-button-active: #ff6188;
+  --color-button-border-clickable: #a9dc7600;
+  --color-button-border-active: #ff6188ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #272822;
+    --color-background-alt: #373831;
+    --color-text: #f8f8f2;
+    --color-selection: #ff6188;
+    --color-link: #75715e;
+    --color-header-active: #ab9df2;
+    --color-link-visited: #ab9df2;
+    --color-link-active: #78dce8;
+    --color-link-focus: #ffd866;
+    --color-button-clickable: #a9dc76;
+    --color-button-active: #ffd866;
+    --color-button-border-clickable: #a9dc7600;
+    --color-button-border-active: #ffd866ff;
+  }
+}
+
+@media print, monochrome, (light-level: washed) {
+  :root {
+    --color-background: #fff;
+    --color-background-alt: #fff;
+    --color-text: #000;
+    --color-selection: #fff;
+    --color-link: #000;
+    --color-link-visited: #272822;
+    --color-header-active: #272822;
+    --color-link-active: #75715e;
+    --color-link-focus: #75715e;
+    --color-button-clickable: #272822;
+    --color-button-active: #75715e;
+    --color-button-border-clickable: #75715e00;
+    --color-button-border-active: #75715eff;
+  }
+}
+
 *,
-* > * {
+* > *,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  * > *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 html {
@@ -25,8 +89,8 @@ body {
 body {
   overflow-x: hidden;
   max-width: 100%;
-  background: #f8f8f2;
-  color: #272822;
+  background: var(--color-background);
+  color: var(--color-text);
   font-family:
     system,
     -apple-system,
@@ -43,39 +107,95 @@ body {
   font-variant-ligatures: common-ligatures;
   font-size: 1rem;
   line-height: 1.618rem;
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background: #f8f8f2;
-    color: #272822;
-  }
-}
-
-@media monochrome, (light-level: washed) {
-  body {
-    background: white;
-    color: #272822;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #272822;
-    color: #f8f8f2;
-  }
-}
-
-@media print {
-  body {
-    background: white;
-    color: #272822;
-  }
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 ::selection {
-  background: #ff6188;
+  background: var(--color-selection);
   color: white;
+}
+
+em,
+q,
+blockquote,
+figcaption {
+  font-family:
+    "Palatino Linotype",
+    Palatino,
+    Palladio,
+    "URW Palladio L",
+    "Book Antiqua",
+    Baskerville,
+    "Bookman Old Style",
+    "Bitstream Charter",
+    "Nimbus Roman No9 L",
+    Garamond,
+    "Apple Garamond",
+    "ITC Garamond Narrow",
+    "New Century Schoolbook",
+    "Century Schoolbook",
+    "Century Schoolbook L",
+    Georgia,
+    serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-style: inherit;
+}
+
+code,
+abbr,
+kbd,
+dd,
+li,
+cite,
+dfn,
+pre,
+i,
+samp,
+textarea,
+input {
+  font-family:
+    Hack,
+    "DejaVu Sans Mono",
+    "Source Code Pro",
+    "Fira Code",
+    "Space Mono",
+    "Droid Sans Mono",
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-style: inherit;
+  font-weight: lighter;
+}
+
+article,
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media print {
+  article,
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+a {
+  outline: 2px solid transparent;
+  transition: outline 0.2s ease-out;
+}
+
+a:focus {
+  outline: 2px solid var(--color-link-focus);
 }
 
 h1,
@@ -116,77 +236,44 @@ h1 + p {
   }
 }
 
-em,
-q,
-blockquote,
-figcaption {
-  font-family:
-    "Palatino Linotype",
-    Palatino,
-    Palladio,
-    "URW Palladio L",
-    "Book Antiqua",
-    Baskerville,
-    "Bookman Old Style",
-    "Bitstream Charter",
-    "Nimbus Roman No9 L",
-    Garamond,
-    "Apple Garamond",
-    "ITC Garamond Narrow",
-    "New Century Schoolbook",
-    "Century Schoolbook",
-    "Century Schoolbook L",
-    Georgia,
-    serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-style: inherit;
+h1 a,
+h2 a,
+h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  transition: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 }
 
-code,
-abbr,
-kbd,
-dd,
-li,
-cite,
-dfn,
-pre,
-samp,
-textarea,
-input {
-  font-family:
-    Hack,
-    "DejaVu Sans Mono",
-    "Source Code Pro",
-    "Fira Code",
-    "Space Mono",
-    "Droid Sans Mono",
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    "Liberation Mono",
-    "Courier New",
-    monospace,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-style: inherit;
-  font-weight: lighter;
+h1 a:hover,
+h1 a:focus,
+h2 a:hover,
+h2 a:focus,
+h3 a:hover,
+h3 a:focus {
+  color: var(--color-header-active);
+  text-decoration-color: var(--color-header-active);
 }
 
-article,
-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+h1 a i,
+h2 a i,
+h3 a i {
+  margin-left: -1em;
+  margin-right: 0.3em;
+  font-size: 0.8em;
+  color: var(--color-link);
+  transition: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 }
 
-@media print {
-  article,
-  section {
-    page-break-inside: avoid;
-  }
+h1 a:hover i,
+h1 a:focus i,
+h2 a:hover i,
+h2 a:focus i,
+h3 a:hover i,
+h3 a:focus i {
+  color: var(--color-header-active);
 }
 
 ul {
@@ -214,56 +301,28 @@ ul li + li {
   }
 }
 
-a {
-  color: #75715e;
+ul li a {
+  color: inherit;
   text-decoration: underline;
   text-decoration-style: solid;
-  text-decoration-color: #75715e;
+  text-decoration-color: var(--color-link);
   text-decoration-thickness: 2px;
   font-weight: normal;
   display: inline-block;
   transition: text-decoration-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-a:visited {
-  text-decoration-color: #ab9df2;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  a {
-    transition: none;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  a {
-    color: #75715e;
-    text-decoration-color: #75715e;
-  }
-}
-
-@media monochrome, (light-level: washed) {
-  a {
-    color: #75715e;
-    text-decoration-color: white;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  a {
-    color: #f8f8f2;
-    text-decoration-color: #75715e;
-  }
+ul li a:visited {
+  text-decoration-color: var(--color-link-active);
 }
 
 @media print {
-  a {
+  ul li a {
     font-weight: bold;
-    color: #75715e;
     text-decoration: none;
   }
 
-  a::after {
+  ul li a::after {
     display: block;
     line-height: 1rem;
     font-weight: normal;
@@ -274,154 +333,10 @@ a:visited {
   }
 }
 
-a:hover,
-a:focus,
-a:focus-within {
+ul li a:hover,
+ul li a:focus,
+ul li a:focus-within {
   font-weight: bold;
-  color: #ab9df2;
-  text-decoration-color: #ab9df2;
-}
-
-@media (prefers-color-scheme: light) {
-  a:hover,
-  a:focus,
-  a:focus-within {
-    font-weight: bold;
-    color: #ab9df2;
-    text-decoration-color: #ab9df2;
-  }
-}
-
-@media monochrome, (light-level: washed) {
-  a:hover,
-  a:focus,
-  a:focus-within {
-    font-weight: bold;
-    color: #75715e;
-    text-decoration-color: #75715e;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  a:hover,
-  a:focus,
-  a:focus-within {
-    font-weight: bold;
-    color: #78dce8;
-    text-decoration-color: #78dce8;
-  }
-}
-
-@media print {
-  a:hover,
-  a:focus,
-  a:focus-within {
-    font-weight: bold;
-    color: #75715e;
-    text-decoration-color: #75715e;
-  }
-}
-
-details {
-  position: relative;
-}
-
-details::after {
-  display: block;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-style: italic;
-  content: '+ Expand';
-}
-
-@media print {
-  details::after {
-    content: none;
-  }
-}
-
-details[open]::after {
-  content: '- Collapse';
-}
-
-@media print {
-  details[open]::after {
-    content: none;
-  }
-}
-
-@media print {
-  /* stylelint-disable-reason Feeling cute, might delete later idk. https://github.com/w3c/csswg-drafts/issues/2084#issuecomment-351177835 */
-  /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
-  details::details-content {
-    display: contents;
-  }
-}
-
-details summary {
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-details summary::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-}
-
-@media print {
-  details summary::after {
-    content: none;
-  }
-}
-
-a:focus,
-details summary:focus,
-button:focus {
-  outline: 2px solid #ff6188;
-}
-
-@media (prefers-color-scheme: dark) {
-  a:focus,
-  details summary:focus,
-  button:focus {
-    outline: 2px solid #ffd866;
-  }
-}
-
-@media print, monochrome, (light-level: washed) {
-  a:focus,
-  details summary:focus,
-  button:focus {
-    outline: 2px solid #75715e;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  a:focus,
-  details summary:focus,
-  button:focus {
-    outline: 2px solid #ff6188;
-  }
-}
-
-dl {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-dl dt,
-dl dd {
-  display: inline-block;
-  max-width: 50%;
-  margin: 0;
-  padding: 0;
+  color: var(--color-link-active);
+  text-decoration-color: var(--color-link-active);
 }

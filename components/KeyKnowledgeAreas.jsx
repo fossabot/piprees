@@ -4,8 +4,8 @@ export default function KeyKnowledgeAreas() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>
-        <h2 id="key-knowledge-areas">Key Knowledge Areas</h2>
-        <ul id="key-knowledge-areas-items">
+        <h2 id="knowledge"><a href="#knowledge"><i>💡</i>Key Knowledge Areas</a></h2>
+        <ul id="knowledge-areas">
           <li>JavaScript ES6+ & JS Frameworks</li>
           <li>Cross-Browser Development & Responsive Design</li>
           <li>Web Performance Optimisation</li>

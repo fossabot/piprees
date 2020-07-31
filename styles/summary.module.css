@@ -1,0 +1,111 @@
+.Tabs {
+  margin-top: 1rem;
+}
+
+.Tab {
+  position: relative;
+  width: 100%;
+}
+
+.TabLabel {
+  display: block;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 42em) {
+  .TabLabel {
+    padding: 0 2rem 0 0;
+  }
+}
+
+.TabLabel::after {
+  position: absolute;
+  display: block;
+  top: -1rem;
+  right: -1rem;
+  left: -1rem;
+  bottom: -1rem;
+  padding: 1rem;
+  content: "+";
+  font-size: 2rem;
+  color: var(--color-button-clickable);
+  text-align: right;
+  border: 1px dashed transparent;
+  border-radius: 0.3rem;
+  transition: color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+@media screen and (pointer) and (hover: hover) {
+  .TabLabel::after {
+    border: 1px dashed var(--color-button-border-clickable);
+  }
+}
+
+@media screen and (pointer) and (hover: hover) {
+  .TabLabel:hover::after,
+  .Tab input:focus + .TabLabel::after {
+    border: 1px dashed var(--color-button-border-active);
+    color: var(--color-button-active);
+    animation: bouncepadding 0.5s ease-in-out infinite forwards;
+  }
+}
+
+@media screen and (pointer) and (hover: hover) {
+  .Tab input:checked:focus + .TabLabel::after {
+    animation: none;
+  }
+}
+
+.TabContent {
+  max-height: 0;
+  padding: 0 2rem;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (min-width: 42em) {
+  .TabContent {
+    padding: 0 2rem 0 0;
+  }
+}
+
+@media print {
+  .TabContent {
+    max-height: 100vh;
+  }
+}
+
+.Tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.Tab input:checked + .TabLabel::after {
+  content: '−';
+}
+
+.Tab input:checked + .TabLabel + .TabContent {
+  max-height: 100vh;
+}
+
+@media print {
+  .Tab input {
+    display: none;
+  }
+}
+
+@keyframes bouncepadding {
+  0% {
+    padding: 1rem;
+  }
+
+  50% {
+    padding: 0.8rem 1rem 1.2rem;
+  }
+
+  100% {
+    padding: 1rem;
+  }
+}

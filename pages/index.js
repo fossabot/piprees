@@ -3,6 +3,7 @@ import Introduction from '../components/Introduction.jsx'
 import CareerSummary from '../components/CareerSummary.jsx'
 import KeyKnowledgeAreas from '../components/KeyKnowledgeAreas.jsx'
 import GetInTouch from '../components/GetInTouch.jsx'
+import Outro from '../components/Outro.jsx'
 import Head from 'next/head'
 
 export default function Index() {
@@ -45,6 +46,7 @@ export default function Index() {
       <CareerSummary />
       <KeyKnowledgeAreas />
       <GetInTouch />
+      <Outro />
     </main>
   )
 }

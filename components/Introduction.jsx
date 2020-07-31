@@ -1,25 +1,16 @@
 import Blocks from '../styles/blocks.module.css';
-
-let summaryClickedStatus = false;
-
-function summaryClicked() {
-  if (summaryClickedStatus === false) {
-    summaryClickedStatus = true;
-    window.toastedAnalytics.emit('summaryClicked', { id: 'intro' });
-  }
-}
+import Summary from './Summary.jsx';
 
 export default function Introduction() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>
-        <h1 id="title">Phillip Rees</h1>
+        <h1 id="title"><a href="#title"><i>🍵</i>Phillip Rees</a></h1>
         <p id="subtitle"><em>UI Designer</em> & Front-End Developer</p>
-        <details>
-          <summary id="intro" onClick={() => summaryClicked()}>I&apos;ve worked for local, government, and international clients developing solutions with code, pixels, and ink.</summary>
-          <p id="intro-expanded">I get inspired by new ideas and I love discovering age-old strategies and wisdom. I know the value of designing for inclusivity right from the get-go, and I take our user&apos;s needs seriously.</p>
+        <Summary id="intro" text="I&apos;ve worked for local, government, and international clients developing solutions with code, pixels, and ink.">
+          <p>I get inspired by new ideas and I love discovering age-old strategies and wisdom. I know the value of designing for inclusivity right from the get-go, and I take our user&apos;s needs seriously.</p>
           <p>I never shy away from trying something different if it brings our team and the business real value. I see constraints as an opportunity for innovative ideas to flourish, and I love finding simple solutions to complex problems.</p>
-        </details>
+        </Summary>
       </div>
     </section>
   )

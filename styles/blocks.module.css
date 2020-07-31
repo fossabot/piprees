@@ -1,6 +1,7 @@
 .Container {
   display: flex;
   width: calc(100% - 4rem);
+  max-width: 42em;
   flex-wrap: wrap;
   padding: 0;
   margin-left: auto;
@@ -12,7 +13,6 @@
 
 @media (min-width: 42em) {
   .Container {
-    max-width: 42em;
     text-align: left;
   }
 }
