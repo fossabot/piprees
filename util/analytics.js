@@ -38,7 +38,7 @@ export function summaryClicked(id) {
 }
 
 export function themeToggleClicked(mode) {
-  if (themeToggleClickedStatus[mode] == null) {
+  if (themeToggleClickedStatus[mode] === false) {
     themeToggleClickedStatus[mode] = true;
     window.toastedAnalytics.emit('themeToggleClicked', { mode });
   }
