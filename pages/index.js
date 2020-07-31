@@ -1,4 +1,4 @@
-import LightSwitch from '../components/LightSwitch.jsx'
+import LightSwitch from '../components/LightSwitch.jsx';
 import Animation from '../components/Animation.jsx'
 import Introduction from '../components/Introduction.jsx'
 import CareerSummary from '../components/CareerSummary.jsx'
