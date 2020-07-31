@@ -12,9 +12,8 @@ export default function LightSwitchComponent() {
   const tbemeMode = themeIsDark ? 'light' : 'dark';
 
   if (process.browser && hasThemeSet === false) {
+    document.documentElement.classList.add(themeIsDark ? 'theme-dark' : 'theme-light');
     hasThemeSet = true;
-    document.documentElement.classList.add(themeIsDark ? 'theme-light' : 'theme-dark');
-    document.documentElement.classList.remove(!themeIsDark ? 'theme-light' : 'theme-dark');
   }
 
   const toggleTheme = () => {
