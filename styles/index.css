@@ -227,6 +227,7 @@ section {
 }
 
 a {
+  color: inherit;
   outline: 2px solid transparent;
   transition: outline 0.2s ease-out, color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 }
@@ -276,7 +277,6 @@ h1 + p {
 h1 a,
 h2 a,
 h3 a {
-  color: inherit;
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-color: transparent;

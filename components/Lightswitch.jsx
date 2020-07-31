@@ -25,7 +25,7 @@ export default function LightSwitchComponent() {
 
   return (
     <div class={LightSwitch.Wrapper}>
-      <button type="button" class={LightSwitch.Toggle} onClick={toggleTheme} title={`Change to ${tbemeMode} theme`}>
+      <button type="button" class={LightSwitch.Toggle} onClick={toggleTheme} title={`Switch to ${tbemeMode} theme`}>
         {themeIcon}
       </button>
     </div>

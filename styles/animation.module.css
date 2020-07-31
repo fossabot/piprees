@@ -51,23 +51,10 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .Animation::before,
-  .Animation::after {
-    animation: none;
-  }
-}
-
 @media print {
   .Animation {
     padding-top: 0;
     height: 0;
-  }
-
-  .Animation::before,
-  .Animation::after {
-    animation: none;
-    content: none;
   }
 }
 
