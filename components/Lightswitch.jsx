@@ -15,7 +15,6 @@ export default function LightSwitchComponent() {
     document.documentElement.classList.remove(!themeIsDark ? 'theme-light' : 'theme-dark');
   }
 
-
   const toggleTheme = () => {
     document.documentElement.classList.add(themeIsDark ? 'theme-light' : 'theme-dark');
     document.documentElement.classList.remove(!themeIsDark ? 'theme-light' : 'theme-dark');
