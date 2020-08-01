@@ -62,6 +62,7 @@ export default function ContactFormComponent() {
         autoCapitalize="off"
         autoCorrect="off"
         onClick={() => contactFormClicked('email')}
+        onChange={event => setEmail(event.target.value)}
         onBlur={event => setEmail(event.target.value)}
         value={storedEmail || ''}
         required
@@ -79,6 +80,7 @@ export default function ContactFormComponent() {
         pattern="[^@\s]+"
         placeholder="Hi Pip! Well, if the coffee's first rate, then so is everything else..."
         onClick={() => contactFormClicked('message')}
+        onChange={event => setContent(event.target.value)}
         onBlur={event => setContent(event.target.value)}
         value={storedContent || ''}
         required
