@@ -1,5 +1,5 @@
-import Blocks from '../styles/blocks.module.css';
-import Animation from '../styles/animation.module.css';
+import Blocks from '../styles/blocks.module.css'
+import Animation from '../styles/animation.module.css'
 
 export default function AnimationComponent() {
   return (

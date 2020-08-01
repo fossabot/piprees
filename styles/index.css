@@ -104,8 +104,8 @@
 }
 
 html {
-  height: -webkit-fill-available;
   width: 100%;
+  height: -webkit-fill-available;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -116,11 +116,11 @@ body {
   max-width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background: var(--color-background);
+  overflow-x: hidden;
   color: var(--color-text);
+  font-size: 1rem;
   font-family:
     system,
     -apple-system,
@@ -134,15 +134,15 @@ body {
     "Apple Color Emoji",
     "Segoe UI Emoji",
     "Segoe UI Symbol";
-  font-variant-ligatures: common-ligatures;
-  font-size: 1rem;
   line-height: 1.618rem;
+  background: var(--color-background);
   transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  font-variant-ligatures: common-ligatures;
 }
 
 ::selection {
-  background: var(--color-selection);
   color: white;
+  background: var(--color-selection);
   transition: background-color 0.2s ease-out;
 }
 
@@ -186,6 +186,7 @@ i,
 samp,
 textarea,
 input {
+  font-weight: lighter;
   font-family:
     Hack,
     "DejaVu Sans Mono",
@@ -204,7 +205,6 @@ input {
     "Segoe UI Emoji",
     "Segoe UI Symbol";
   font-style: inherit;
-  font-weight: lighter;
 }
 
 article,
@@ -224,6 +224,25 @@ a {
   color: inherit;
   outline: 2px solid transparent;
   transition: outline 0.2s ease-out, color 0.2s ease-out, text-decoration-color 0.2s ease-out;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+}
+
+ul li a {
+  display: inline-block;
+  color: inherit;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 2px;
 }
 
 a:focus {
@@ -252,29 +271,20 @@ h2 {
 
 h1 + p {
   display: block;
-  font-style: italic;
-  font-size: 1.2em;
   margin-bottom: 1rem;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 @media print {
   h1 + p::after {
     display: block;
     margin-top: 12px;
+    font-size: 1rem;
     font-style: normal;
     letter-spacing: 1px;
-    font-size: 1rem;
     content: 'https://piprees.dev/';
   }
-}
-
-h1 a,
-h2 a,
-h3 a {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 2px;
 }
 
 h1 a:hover,
@@ -290,10 +300,10 @@ h3 a:focus {
 h1 a i,
 h2 a i,
 h3 a i {
-  margin-left: -1em;
   margin-right: 0.3em;
-  font-size: 0.8em;
+  margin-left: -1em;
   color: var(--color-link);
+  font-size: 0.8em;
   transition: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 }
 
@@ -331,16 +341,6 @@ ul li + li {
   }
 }
 
-ul li a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: var(--color-link);
-  text-decoration-thickness: 2px;
-  font-weight: normal;
-  display: inline-block;
-}
-
 ul li a:visited {
   text-decoration-color: var(--color-link-active);
 }
@@ -353,10 +353,10 @@ ul li a:visited {
 
   ul li a::after {
     display: block;
-    line-height: 1rem;
     font-weight: normal;
     font-size: 1rem;
     font-style: normal;
+    line-height: 1rem;
     letter-spacing: 1px;
     content: attr(href);
   }
@@ -365,7 +365,7 @@ ul li a:visited {
 ul li a:hover,
 ul li a:focus,
 ul li a:focus-within {
-  font-weight: bold;
   color: var(--color-link-active);
+  font-weight: bold;
   text-decoration-color: var(--color-link-active);
 }

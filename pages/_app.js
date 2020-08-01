@@ -1,4 +1,4 @@
-import { StaticKitProvider } from '@statickit/react';
+import { StaticKitProvider } from '@statickit/react'
 // import App from 'next/app'
 import '../styles/index.css'
 

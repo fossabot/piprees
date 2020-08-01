@@ -21,19 +21,19 @@
 
 .TabLabel::after {
   position: absolute;
-  display: block;
   top: -1rem;
   right: -1rem;
-  left: -1rem;
   bottom: -1rem;
+  left: -1rem;
+  display: block;
   padding: 1rem;
-  content: "+";
-  font-size: 2rem;
   color: var(--color-button-clickable);
+  font-size: 2rem;
   text-align: right;
   border: 1px dashed transparent;
   border-radius: 0.3rem;
   transition: color 0.2s ease-out, border-color 0.2s ease-out;
+  content: "+";
 }
 
 @media screen and (pointer) and (hover: hover) {
@@ -45,8 +45,8 @@
 @media screen and (pointer) and (hover: hover) {
   .TabLabel:hover::after,
   .Tab input:focus + .TabLabel::after {
-    border: 1px dashed var(--color-button-border-active);
     color: var(--color-button-active);
+    border: 1px dashed var(--color-button-border-active);
     animation: bouncepadding 0.5s ease-in-out infinite forwards;
   }
 }
@@ -78,8 +78,8 @@
 
 .Tab input {
   position: absolute;
-  opacity: 0;
   z-index: -1;
+  opacity: 0;
 }
 
 .Tab input:checked + .TabLabel::after {

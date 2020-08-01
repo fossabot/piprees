@@ -2,40 +2,53 @@
   "name": "piprees.dev",
   "version": "2.0.0",
   "license": "MIT",
+  "author": {
+    "email": "piprees@outlook.com",
+    "name": "Phillip Rees",
+    "url": "https://piprees.dev"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --fix .",
+    "lint:js": "eslint --fix --ext .js --ext .json --ext .jsx .",
     "lint:css": "stylelint --fix \"./**/*.css\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:js && npm run lint:css"
+    }
+  },
   "devDependencies": {
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-config-preact": "^1.1.1",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
     "prettier": "^2.0.5",
+    "prettier-config-standard": "^1.0.1",
     "react-refresh": "^0.8.3",
-    "stylelint": "13.6.1",
+    "stylelint": "^13.6.1",
     "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {
-    "@prefresh/next": "^0.3.0",
-    "@statickit/react": "^2.1.1",
-    "date-fns": "^2.15.0",
-    "next": "^9.5.0",
-    "next-offline": "^5.0.2",
-    "preact": "^10.4.4",
-    "preact-render-to-string": "^5.1.9",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1"
+    "@prefresh/next": "0.3.2",
+    "@statickit/react": "2.1.1",
+    "date-fns": "2.15.0",
+    "next": "9.5.1",
+    "next-offline": "5.0.2",
+    "preact": "10.4.6",
+    "preact-render-to-string": "5.1.10",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.1.0"
   }
 }

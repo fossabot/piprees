@@ -1,7 +1,7 @@
 
 body {
-  background: #272822;
   color: #f8f8f2;
+  background: #272822;
 }
 
 .selected {
@@ -18,13 +18,13 @@ body {
 }
 
 ::selection {
-  border-left: 1px solid #f8f8f0;
   background: #373831;
+  border-left: 1px solid #f8f8f0;
 }
 
 ::selection::first-letter {
-  text-decoration: underline;
   color: white;
+  text-decoration: underline;
 }
 
 .comment {
@@ -76,6 +76,6 @@ body {
 }
 
 .Error {
-  background: #ff6188;
   color: #f8f8f0;
+  background: #ff6188;
 }

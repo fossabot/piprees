@@ -1,18 +1,18 @@
 
 .Container {
-  background: var(--color-background-alt);
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  background: var(--color-background-alt);
   transition: background-color 0.2s ease-out;
 }
 
 .Inner {
   width: calc(100% - 4rem);
   max-width: 42em;
-  padding: 0;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  padding: 0;
   text-align: center;
 }
 

@@ -6,5 +6,6 @@
   },
   "files.watcherExclude": {
     "**/.next/**": true
-  }
+  },
+  "javascript.format.enable": false
 }

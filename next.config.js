@@ -1,9 +1,9 @@
-const withOffline = require('next-offline');
+const withOffline = require('next-offline')
 const withPrefresh = require('@prefresh/next')
 
 const nextConfig = {
   target: 'serverless',
-  transformManifest: (manifest) => ['/'].concat(manifest),
+  transformManifest: manifest => ['/'].concat(manifest),
   generateInDevMode: true,
   workboxOpts: {
     swDest: 'static/service-worker.js',
@@ -17,14 +17,14 @@ const nextConfig = {
           cacheName: 'https-calls',
           expiration: {
             maxEntries: 20,
-            maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
           },
           cacheableResponse: {
-            statuses: [0, 200]
-          }
-        }
-      }
-    ]
+            statuses: [0, 200],
+          },
+        },
+      },
+    ],
   },
   webpack(config, { dev, isServer }) {
     // Move Preact into the framework chunk instead of duplicating in routes:
@@ -54,14 +54,14 @@ const nextConfig = {
     if (dev && !isServer) {
       const entry = config.entry
       config.entry = () =>
-        entry().then((entries) => {
+        entry().then(entries => {
           entries['main.js'] = ['preact/debug'].concat(entries['main.js'] || [])
           return entries
         })
     }
 
     return config
-  }
-};
+  },
+}
 
-module.exports = withOffline(withPrefresh(nextConfig));
+module.exports = withOffline(withPrefresh(nextConfig))

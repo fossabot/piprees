@@ -17,29 +17,69 @@ export default function Index() {
         <link rel="dns-prefetch" href="https://cdn.toastedanalytics.com" />
         <link rel="preconnect" href="https://x.toastedanalytics.com" />
         <link rel="preconnect" href="https://cdn.toastedanalytics.com" />
-        <link rel="preload" as="script" href="/scripts.js" integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2" />
-        <link rel="preload" as="script" href="https://x.toastedanalytics.com/bundle.js" />
+        <link
+          rel="preload"
+          as="script"
+          href="/scripts.js"
+          integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2"
+        />
+        <link
+          rel="preload"
+          as="script"
+          href="https://x.toastedanalytics.com/bundle.js"
+        />
         <title>Pip Rees | UI Designer & Front-End Developer</title>
-        <meta name="description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
+        <meta
+          name="description"
+          content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink."
+        />
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Pip Rees | UI Designer & Front-End Developer" />
+        <meta
+          property="og:title"
+          content="Pip Rees | UI Designer & Front-End Developer"
+        />
         <meta property="og:url" content="https://piprees.dev" />
         <meta property="og:image" content="/avatar.jpg" />
         <meta property="profile:first_name" content="Phillip" />
         <meta property="profile:last_name" content="Rees" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@piprees" />
-        <meta name="twitter:title" content="Pip Rees | UI Designer & Front-End Developer" />
-        <meta name="twitter:description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
+        <meta
+          name="twitter:title"
+          content="Pip Rees | UI Designer & Front-End Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink."
+        />
         <meta name="twitter:image" content="/avatar.jpg" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-16x16.png"
+          sizes="16x16"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-32x32.png"
+          sizes="32x32"
+        />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#a9dc76" />
-        <script type="text/javascript" defer src="/scripts.js" integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2" />
-        <script type="text/javascript" defer src="https://x.toastedanalytics.com/bundle.js" />
+        <script
+          type="text/javascript"
+          defer
+          src="/scripts.js"
+          integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2"
+        />
+        <script
+          type="text/javascript"
+          defer
+          src="https://x.toastedanalytics.com/bundle.js"
+        />
       </Head>
       <Animation />
       <Introduction />

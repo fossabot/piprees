@@ -1,10 +1,14 @@
-import Blocks from '../styles/blocks.module.css';
+import Blocks from '../styles/blocks.module.css'
 
 export default function KeyKnowledgeAreasComponent() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>
-        <h2 id="knowledge"><a href="#knowledge"><i>💡</i>Key Knowledge Areas</a></h2>
+        <h2 id="knowledge">
+          <a href="#knowledge">
+            <i>💡</i>Key Knowledge Areas
+          </a>
+        </h2>
         <ul id="knowledge-areas">
           <li>JavaScript ES6+ & JS Frameworks</li>
           <li>Cross-Browser Development & Responsive Design</li>

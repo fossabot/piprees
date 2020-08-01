@@ -1,48 +1,48 @@
 .Animation {
   position: relative;
-  padding-top: calc(100vh - 20rem);
-  margin-top: 2rem;
+  z-index: -1;
   flex: 1;
   width: calc(100% - 2rem);
   height: calc(100vh - 22rem);
+  margin-top: 2rem;
+  padding-top: calc(100vh - 20rem);
   overflow: visible;
   contain: size layout style;
-  z-index: -1;
 }
 
 .Animation::before {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  z-index: -1;
   display: block;
-  margin: 0 auto;
   width: calc(100% - 2rem);
   height: calc(100vh - 22rem);
-  transform: translate(-1rem, -1rem);
+  margin: 0 auto;
   border: 1rem solid #ab9df2;
-  content: '';
+  transform: translate(-1rem, -1rem);
   animation: first-before 12s ease-in-out infinite forwards;
   animation-delay: 7.17s;
-  z-index: -1;
+  content: '';
 }
 
 .Animation::after {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  z-index: -1;
   display: block;
-  margin: 0 auto;
   width: calc(100% - 2rem);
   height: calc(100vh - 22rem);
-  transform: translate(1rem, 1rem);
+  margin: 0 auto;
   border: 1rem solid #ff6188;
-  content: '';
+  transform: translate(1rem, 1rem);
+  opacity: 0.86;
   animation: first-after 7.17s linear infinite forwards;
   animation-delay: 9s;
-  z-index: -1;
-  opacity: 0.86;
+  content: '';
 }
 
 @media (prefers-reduced-transparency: reduce) {
@@ -53,8 +53,8 @@
 
 @media print {
   .Animation {
-    padding-top: 0;
     height: 0;
+    padding-top: 0;
   }
 }
 
@@ -155,18 +155,18 @@
   }
 
   60% {
-    border: inset 1rem solid #78dce8;
     background-color: #a9dc7600;
+    border: inset 1rem solid #78dce8;
   }
 
   62% {
-    border: inset 0.2rem solid #a9dc76;
     background-color: #a9dc76ff;
+    border: inset 0.2rem solid #a9dc76;
   }
 
   64% {
-    border: 1rem solid #78dce8;
     background-color: #a9dc7600;
+    border: 1rem solid #78dce8;
   }
 
   66% {
