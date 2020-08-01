@@ -15,12 +15,18 @@ export default function KeyKnowledgeAreasComponent() {
           </a>
         </h2>
         <ul id="knowledge-areas">
-          <li>JavaScript ES6+ & JS Frameworks</li>
+          <li>
+            JavaScript <abbr title="Modern JavaScript">ES6+</abbr> & JS
+            Frameworks
+          </li>
           <li>Cross-Browser Development & Responsive Design</li>
           <li>Web Performance Optimisation</li>
           <li>Node.js & Continuous Integration</li>
           <li>Front-End Debugging & JavaScript Unit Testing</li>
-          <li>SEO, Analytics, and A/B Testing</li>
+          <li>
+            <abbr title="Search Engine Optimisation">SEO</abbr>, Analytics, and
+            A/B Testing
+          </li>
           <li>Presenting, Pitching, & Product Ownership</li>
           <li>Visual Design & Corporate Branding</li>
           <li>User Experience Design Patterns</li>

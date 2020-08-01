@@ -12,7 +12,7 @@ export default function IntroductionComponent() {
                 🍵
               </span>
             </i>
-            Phillip Rees
+            <abbr title="Phillip">Pip</abbr> Rees
           </a>
         </h1>
         <p id="subtitle">

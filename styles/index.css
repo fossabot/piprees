@@ -113,10 +113,10 @@ body {
   transition: background-color 0.2s ease-out;
 }
 
-em,
-q,
 blockquote,
-figcaption {
+em,
+figcaption,
+q {
   font-family:
     "Palatino Linotype",
     Palatino,
@@ -142,7 +142,6 @@ figcaption {
 }
 
 code,
-abbr,
 kbd,
 dd,
 li,
