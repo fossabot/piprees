@@ -19,6 +19,31 @@
           "value": "/"
         }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; prefetch-src 'self' https://x.toastedanalytics.com; script-src 'self' https://x.toastedanalytics.com https://cdn.toastedanalytics.com/; connect-src 'self' https://x.toastedanalytics.com https://api.statickit.com; style-src 'self'; img-src 'self'; font-src 'self'; media-src 'self'; object-src 'none'; child-src 'self'; frame-src 'self'; worker-src 'self'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; manifest-src 'self'; upgrade-insecure-requests; block-all-mixed-content; sandbox allow-same-origin allow-scripts allow-popups allow-forms; trusted-types;"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "document-domain 'none'; display-capture 'none'; geolocation 'none'; camera 'none'; microphone 'none'; publickey-credentials-get 'none'; payment 'none';"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=43200, immutable"
+        }
+      ]
     }
   ]
 }

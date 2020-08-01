@@ -13,8 +13,12 @@ export default function Index() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="dns-prefetch" href="https://x.toastedanalytics.com" />
         <link rel="dns-prefetch" href="https://cdn.toastedanalytics.com" />
+        <link rel="preconnect" href="https://x.toastedanalytics.com" />
         <link rel="preconnect" href="https://cdn.toastedanalytics.com" />
+        <link rel="preload" as="script" href="/scripts.js" integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2" />
+        <link rel="preload" as="script" href="https://x.toastedanalytics.com/bundle.js" />
         <title>Pip Rees | UI Designer & Front-End Developer</title>
         <meta name="description" content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink." />
         <meta property="og:type" content="profile" />
@@ -34,13 +38,8 @@ export default function Index() {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#a9dc76" />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `window._TOASTED_ID="9a0e0776-a69c-4241-8d47-fd4b1877fbb2";`,
-          }}
-        />
-        <script type="text/javascript" async src="https://x.toastedanalytics.com/bundle.js" />
+        <script type="text/javascript" defer src="/scripts.js" integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2" />
+        <script type="text/javascript" defer src="https://x.toastedanalytics.com/bundle.js" />
       </Head>
       <Animation />
       <Introduction />
