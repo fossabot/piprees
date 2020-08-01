@@ -21,7 +21,7 @@ export default function Index() {
           rel="preload"
           as="script"
           href="/scripts.js"
-          integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2"
+          integrity="sha384-imLVLdnnlqROIVuF7A1yaDszq6pjaa3m4U3f+OjKtcn9kwg8dYFHumCpRQDWOyBg"
         />
         <link
           rel="preload"
@@ -73,7 +73,7 @@ export default function Index() {
           type="text/javascript"
           defer
           src="/scripts.js"
-          integrity="sha384-tSqLfbdQ2tUSPetoiQWN0b/a4ixLjjPSG1YRzF1SP5g+A1MpDtNm/IDyqqFoM1B2"
+          integrity="sha384-imLVLdnnlqROIVuF7A1yaDszq6pjaa3m4U3f+OjKtcn9kwg8dYFHumCpRQDWOyBg"
         />
         <script
           type="text/javascript"
