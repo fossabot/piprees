@@ -37,7 +37,7 @@
         },
         {
           "key": "Expect-CT",
-          "value": "max-age=86400,report-uri=\"https://piprees.uriports.com/reports/report\""
+          "value": "report-uri=\"https://piprees.uriports.com/reports/enforce\", max-age=86400, enforce"
         },
         {
           "key": "Permissions-Policy",
