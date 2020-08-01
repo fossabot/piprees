@@ -31,7 +31,8 @@
 }
 
 @media print, monochrome, (light-level: washed) {
-  :root {
+  :root,
+  .theme-dark {
     --color-background: #fff;
     --color-background-alt: #fff;
     --color-text: #000;
@@ -213,6 +214,15 @@ ul li a {
 
 a:focus {
   outline: 2px solid var(--color-link-focus);
+}
+
+h1 a:visited,
+h2 a:visited,
+h3 a:visited {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
 }
 
 h1,

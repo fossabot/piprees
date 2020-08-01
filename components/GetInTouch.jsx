@@ -102,12 +102,10 @@ export default function GetInTouchComponent() {
           <ul id="contact-resume">
             <li>
               <a
-                href="https://piprees.dev/PipReesCV.pdf"
+                href="/PipReesCV.pdf"
                 target="_blank"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked('DownloadCV', 'https://piprees.dev/PipReesCV.pdf')
-                }>
+                onClick={() => linkClicked('DownloadCV', '/PipReesCV.pdf')}>
                 <i>
                   <span role="img" aria-label="My Documentation">
                     📝
