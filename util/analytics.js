@@ -30,6 +30,10 @@ export function linkClicked(id, url) {
   }
 }
 
+export function hrefClicked(event) {
+  linkClicked(event.target.textContent, event.target.href)
+}
+
 export function summaryClicked(id) {
   try {
     if (summaryClickedStatus[id] == null) {

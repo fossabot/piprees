@@ -1,11 +1,12 @@
 import Blocks from '../styles/blocks.module.css'
+import { hrefClicked } from '../util/analytics.js'
 
 export default function KeyKnowledgeAreasComponent() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>
         <h2 id="knowledge">
-          <a href="#knowledge">
+          <a href="#knowledge" onClick={hrefClicked}>
             <i>
               <span role="img" aria-label="Lightbulb moments">
                 💡

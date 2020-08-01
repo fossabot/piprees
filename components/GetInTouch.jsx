@@ -1,5 +1,5 @@
 import Blocks from '../styles/blocks.module.css'
-import { linkClicked } from '../util/analytics.js'
+import { hrefClicked } from '../util/analytics.js'
 import ContactForm from './ContactForm.jsx'
 
 export default function GetInTouchComponent() {
@@ -8,7 +8,7 @@ export default function GetInTouchComponent() {
       <section class={Blocks.Container}>
         <div class={Blocks.Column}>
           <h2 id="contact">
-            <a href="#contact">
+            <a href="#contact" onClick={hrefClicked}>
               <i>
                 <span role="img" aria-label="Send a letter">
                   📧
@@ -28,7 +28,7 @@ export default function GetInTouchComponent() {
       <section class={Blocks.Container}>
         <div class={Blocks.ColumnHalf}>
           <h3 id="hangouts">
-            <a href="#hangouts">
+            <a href="#hangouts" onClick={hrefClicked}>
               <i>
                 <span role="img" aria-label="Pointing to the right place">
                   👉
@@ -42,9 +42,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://www.linkedin.com/in/piprees"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked('LinkedIn', 'https://www.linkedin.com/in/piprees')
-                }>
+                onClick={hrefClicked}>
                 LinkedIn
               </a>
             </li>
@@ -52,9 +50,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://www.behance.net/piprees"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked('Behance', 'https://www.behance.net/piprees')
-                }>
+                onClick={hrefClicked}>
                 Behance
               </a>
             </li>
@@ -62,9 +58,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://github.com/piprees"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked('GitHub', 'https://github.com/piprees')
-                }>
+                onClick={hrefClicked}>
                 GitHub
               </a>
             </li>
@@ -72,7 +66,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://dev.to/piprees"
                 rel="nofollow noreferrer"
-                onClick={() => linkClicked('dev.to', 'https://dev.to/piprees')}>
+                onClick={hrefClicked}>
                 dev.to
               </a>
             </li>
@@ -80,9 +74,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://twitter.com/piprees"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked('Twitter', 'https://twitter.com/piprees')
-                }>
+                onClick={hrefClicked}>
                 Twitter
               </a>
             </li>
@@ -90,7 +82,7 @@ export default function GetInTouchComponent() {
         </div>
         <div class={Blocks.ColumnHalf}>
           <h3 id="recruiting">
-            <a href="#recruiting">
+            <a href="#recruiting" onClick={hrefClicked}>
               <i>
                 <span role="img" aria-label="A tick in the box">
                   ✅
@@ -105,7 +97,7 @@ export default function GetInTouchComponent() {
                 href="/PipReesCV.pdf"
                 target="_blank"
                 rel="nofollow noreferrer"
-                onClick={() => linkClicked('DownloadCV', '/PipReesCV.pdf')}>
+                onClick={hrefClicked}>
                 <i>
                   <span role="img" aria-label="My Documentation">
                     📝
@@ -118,12 +110,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://my.indeed.com/p/phillipr-epg4jlw"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked(
-                    'Indeed',
-                    'https://my.indeed.com/p/phillipr-epg4jlw'
-                  )
-                }>
+                onClick={hrefClicked}>
                 Indeed
               </a>
             </li>
@@ -131,12 +118,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://www.behance.net/piprees/resume"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked(
-                    'Behance',
-                    'https://www.behance.net/piprees/resume'
-                  )
-                }>
+                onClick={hrefClicked}>
                 Behance
               </a>
             </li>
@@ -144,9 +126,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://angel.co/u/piprees"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked('Angel.co', 'https://angel.co/u/piprees')
-                }>
+                onClick={hrefClicked}>
                 Angel.co
               </a>
             </li>
@@ -154,12 +134,7 @@ export default function GetInTouchComponent() {
               <a
                 href="https://landing.jobs/profile/345c013471af4ae8144475"
                 rel="nofollow noreferrer"
-                onClick={() =>
-                  linkClicked(
-                    'Landing.jobs',
-                    'https://landing.jobs/profile/345c013471af4ae8144475'
-                  )
-                }>
+                onClick={hrefClicked}>
                 Landing.jobs
               </a>
             </li>

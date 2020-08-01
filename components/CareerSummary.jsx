@@ -2,6 +2,7 @@ import { differenceInYears } from 'date-fns'
 
 import Blocks from '../styles/blocks.module.css'
 import Summary from './Summary.jsx'
+import { hrefClicked } from '../util/analytics.js'
 
 export default function CareerSummaryComponent() {
   const now = Date.now()
@@ -12,7 +13,7 @@ export default function CareerSummaryComponent() {
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>
         <h2 id="career">
-          <a href="#career">
+          <a href="#career" onClick={hrefClicked}>
             <i>
               <span role="img" aria-label="The tech guy">
                 👨‍💻

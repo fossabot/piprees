@@ -1,12 +1,13 @@
 import Blocks from '../styles/blocks.module.css'
 import Summary from './Summary.jsx'
+import { hrefClicked } from '../util/analytics.js'
 
 export default function IntroductionComponent() {
   return (
     <section class={Blocks.Container}>
       <div class={Blocks.Column}>
         <h1 id="title">
-          <a href="#title">
+          <a href="#title" onClick={hrefClicked}>
             <i>
               <span role="img" aria-label="I like matcha latte">
                 🍵
