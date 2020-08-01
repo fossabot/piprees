@@ -215,6 +215,10 @@ a:focus {
   outline: 2px solid var(--color-link-focus);
 }
 
+a:visited {
+  text-decoration-color: transparent;
+}
+
 h1 a:visited,
 h2 a:visited,
 h3 a:visited {
