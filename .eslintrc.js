@@ -7,11 +7,12 @@ module.exports = {
     'standard',
     'preact',
     'plugin:json/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'prettier/react',
     'prettier/standard',
   ],
-  plugins: ['standard', 'json', 'prettier'],
+  plugins: ['standard', 'json', 'jsx-a11y', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

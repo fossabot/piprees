@@ -12,11 +12,12 @@
     "build": "next build",
     "start": "next start",
     "lint:js": "eslint --fix --ext .js --ext .json --ext .jsx .",
-    "lint:css": "stylelint --fix \"./**/*.css\""
+    "lint:css": "stylelint --fix \"./**/*.css\"",
+    "lint:md": "markdownlint --fix \"./**/*.md\" --ignore node_modules"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:js && npm run lint:css"
+      "pre-commit": "npm run lint:js && npm run lint:css && npm run lint:md"
     }
   },
   "devDependencies": {
@@ -26,11 +27,13 @@
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
+    "markdownlint-cli": "^0.23.2",
     "prettier": "^2.0.5",
     "prettier-config-standard": "^1.0.1",
     "react-refresh": "^0.8.3",

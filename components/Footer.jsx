@@ -9,13 +9,22 @@ export default function FooterComponent() {
       <ul class={Footer.Inner}>
         <li>
           <a id="copyright" href="/">
-            <i>©️</i>
+            <i>
+              <span role="img" aria-label="Copyright">
+                ©️
+              </span>
+            </i>
             {thisYear} Phillip Rees
           </a>
         </li>
         <li>
           <a id="footer" href="#title">
-            <i>🎈</i>Back to top
+            <i>
+              <span role="img" aria-label="Going Up...">
+                🎈
+              </span>
+            </i>
+            Back to top
           </a>
         </li>
         <li>
@@ -28,7 +37,12 @@ export default function FooterComponent() {
                 'https://github.com/piprees/piprees/commits/main'
               )
             }>
-            <i>📖</i>Changelog
+            <i>
+              <span role="img" aria-label="Open Source">
+                📖
+              </span>
+            </i>
+            Changelog
           </a>
         </li>
       </ul>

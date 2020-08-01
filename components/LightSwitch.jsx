@@ -16,7 +16,16 @@ export default function LightSwitchComponent() {
   )
 
   const themeIsDark = theme === 'dark'
-  const themeIcon = themeIsDark ? '🌤️' : '🌖'
+  const themeIcon = themeIsDark ? (
+    <span role="img" aria-label="Sunlight">
+      🌤️
+    </span>
+  ) : (
+    <span role="img" aria-label="Moonlight">
+      🌖
+    </span>
+  )
+
   const themeMode = themeIsDark ? 'light' : 'dark'
 
   if (process.browser && hasThemeSet === false) {

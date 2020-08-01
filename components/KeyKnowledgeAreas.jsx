@@ -6,7 +6,12 @@ export default function KeyKnowledgeAreasComponent() {
       <div class={Blocks.Column}>
         <h2 id="knowledge">
           <a href="#knowledge">
-            <i>💡</i>Key Knowledge Areas
+            <i>
+              <span role="img" aria-label="Lightbulb moments">
+                💡
+              </span>
+            </i>
+            Key Knowledge Areas
           </a>
         </h2>
         <ul id="knowledge-areas">

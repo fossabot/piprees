@@ -13,7 +13,12 @@ export default function CareerSummaryComponent() {
       <div class={Blocks.Column}>
         <h2 id="career">
           <a href="#career">
-            <i>👨‍💻</i>Career Summary
+            <i>
+              <span role="img" aria-label="The tech guy">
+                👨‍💻
+              </span>
+            </i>
+            Career Summary
           </a>
         </h2>
         <ul id="career-key-points">

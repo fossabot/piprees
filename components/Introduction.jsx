@@ -7,7 +7,12 @@ export default function IntroductionComponent() {
       <div class={Blocks.Column}>
         <h1 id="title">
           <a href="#title">
-            <i>🍵</i>Phillip Rees
+            <i>
+              <span role="img" aria-label="I like matcha latte">
+                🍵
+              </span>
+            </i>
+            Phillip Rees
           </a>
         </h1>
         <p id="subtitle">

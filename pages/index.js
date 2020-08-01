@@ -83,11 +83,11 @@ export default function Index() {
       </Head>
       <Animation />
       <Introduction />
-      <LightSwitch />
       <CareerSummary />
       <KeyKnowledgeAreas />
       <GetInTouch />
       <Footer />
+      <LightSwitch />
     </main>
   )
 }

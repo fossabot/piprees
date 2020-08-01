@@ -12,7 +12,12 @@ export default function ContactFormComponent() {
     return (
       <div class={`${ContactForm.Form} ${ContactForm.Confirmed}`}>
         <h3>
-          <i>🎉</i> Thanks for the message!
+          <i>
+            <span role="img" aria-label="Woohoo!">
+              🎉
+            </span>
+          </i>{' '}
+          Thanks for the message!
         </h3>
         <p>I&apos;ll get back to you as soon as I have a moment.</p>
         <p>Feel free to connect with me on other platforms in the meantime!</p>

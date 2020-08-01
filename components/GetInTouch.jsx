@@ -9,7 +9,12 @@ export default function GetInTouchComponent() {
         <div class={Blocks.Column}>
           <h2 id="contact">
             <a href="#contact">
-              <i>📧</i>Get In Touch
+              <i>
+                <span role="img" aria-label="Send a letter">
+                  📧
+                </span>
+              </i>
+              Get In Touch
             </a>
           </h2>
           <p id="contact-intro">
@@ -24,7 +29,12 @@ export default function GetInTouchComponent() {
         <div class={Blocks.ColumnHalf}>
           <h3 id="hangouts">
             <a href="#hangouts">
-              <i>👉</i>Hangouts
+              <i>
+                <span role="img" aria-label="Pointing to the right place">
+                  👉
+                </span>
+              </i>
+              Hangouts
             </a>
           </h3>
           <ul id="contact-links">
@@ -81,7 +91,12 @@ export default function GetInTouchComponent() {
         <div class={Blocks.ColumnHalf}>
           <h3 id="recruiting">
             <a href="#recruiting">
-              <i>✅</i>Recruiting?
+              <i>
+                <span role="img" aria-label="A tick in the box">
+                  ✅
+                </span>
+              </i>
+              Recruiting?
             </a>
           </h3>
           <ul id="contact-resume">
@@ -93,7 +108,12 @@ export default function GetInTouchComponent() {
                 onClick={() =>
                   linkClicked('DownloadCV', 'https://piprees.dev/PipReesCV.pdf')
                 }>
-                <i>📝</i>Download CV
+                <i>
+                  <span role="img" aria-label="My Documentation">
+                    📝
+                  </span>
+                </i>
+                Download CV
               </a>
             </li>
             <li>
