@@ -1,5 +1,5 @@
 import LightSwitch from '../styles/lightswitch.module.css'
-import useLocalStorage from '../hooks/useLocalStorage.js'
+import useStorage from '../util/useStorage.js'
 
 import { themeToggleClicked } from '../util/analytics.js'
 
@@ -10,7 +10,8 @@ export default function LightSwitchComponent() {
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
 
-  const [theme, setTheme] = useLocalStorage(
+  const [theme, setTheme] = useStorage(
+    'local',
     'theme',
     defaultIsDark ? 'dark' : 'light'
   )

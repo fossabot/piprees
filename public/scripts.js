@@ -1,6 +1,6 @@
 window._TOASTED_ID = '9a0e0776-a69c-4241-8d47-fd4b1877fbb2'
 
-window.addEventListener('error', function (error) {
+window.logJSError = function (error) {
   if (
     window.toastedAnalytics != null &&
     typeof window.toastedAnalytics.emit === 'function'
@@ -16,4 +16,6 @@ window.addEventListener('error', function (error) {
   } else {
     console.error('Uncaught Error', error)
   }
-})
+}
+
+window.addEventListener('error', window.logJSError)
