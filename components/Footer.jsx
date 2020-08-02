@@ -5,7 +5,7 @@ export default function FooterComponent() {
   const thisYear = new Date().getFullYear()
 
   return (
-    <section class={Footer.Container}>
+    <footer class={Footer.Container}>
       <ul class={Footer.Inner}>
         <li>
           <a id="copyright" href="/" onClick={hrefClicked}>
@@ -41,6 +41,6 @@ export default function FooterComponent() {
           </a>
         </li>
       </ul>
-    </section>
+    </footer>
   )
 }

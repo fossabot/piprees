@@ -4,7 +4,7 @@ import { hrefClicked } from '../util/analytics.js'
 
 export default function IntroductionComponent() {
   return (
-    <section class={Blocks.Container}>
+    <header class={Blocks.Container} role="banner">
       <div class={Blocks.Column}>
         <h1 id="title">
           <a href="#title" onClick={hrefClicked}>
@@ -38,6 +38,6 @@ export default function IntroductionComponent() {
           </p>
         </Summary>
       </div>
-    </section>
+    </header>
   )
 }

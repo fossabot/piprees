@@ -220,6 +220,8 @@ a:hover abbr {
   background: transparent;
 }
 
+header,
+footer,
 article,
 section {
   margin-top: 2rem;

@@ -120,7 +120,7 @@ export default function GetInTouchComponent() {
                     📝
                   </span>
                 </i>
-                Download CV
+                Download PDF Resume
               </a>
             </li>
             <li>
@@ -129,7 +129,7 @@ export default function GetInTouchComponent() {
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
                 <Icon icon={'indeed'} />
-                Indeed
+                Indeed Resume
               </a>
             </li>
             <li>
@@ -138,7 +138,7 @@ export default function GetInTouchComponent() {
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
                 <Icon icon={faBehance} />
-                Behance
+                Behance Resume
               </a>
             </li>
             <li>
@@ -147,7 +147,7 @@ export default function GetInTouchComponent() {
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
                 <Icon icon={faAngellist} />
-                Angel.co
+                Angel.co Resume
               </a>
             </li>
             <li>
@@ -156,7 +156,7 @@ export default function GetInTouchComponent() {
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
                 <Icon icon={'landingjobs'} />
-                Landing.jobs
+                LandingJobs Resume
               </a>
             </li>
           </ul>
