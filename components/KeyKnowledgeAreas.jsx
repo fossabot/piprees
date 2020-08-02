@@ -17,8 +17,7 @@ export default function KeyKnowledgeAreasComponent() {
         </h2>
         <ul id="knowledge-areas">
           <li>
-            JavaScript <abbr title="Modern JavaScript">ES6+</abbr> & JS
-            Frameworks
+            JavaScript <abbr title="ECMAScript 6+">ES6+</abbr> & JS Frameworks
           </li>
           <li>Cross-Browser Development & Responsive Design</li>
           <li>Web Performance Optimisation</li>
