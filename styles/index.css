@@ -187,24 +187,30 @@ input {
 }
 
 abbr {
-  display: inline-block;
-  margin: -0.25em;
-  padding: 0.25em;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--color-link);
-  text-decoration-thickness: var(--border-thickness);
-  text-decoration-skip: none;
-  text-decoration-skip-ink: none;
-  background: transparent;
-  border-radius: var(--border-radius);
-  cursor: help;
-  transition: background-color var(--animation-speed) var(--animation-bezier);
+  text-decoration: none;
 }
 
-abbr:hover {
-  background: var(--color-highlight);
-  text-decoration-color: var(--color-highlight);
+@media screen and (pointer) and (hover: hover) {
+  abbr {
+    display: inline-block;
+    margin: -0.25em;
+    padding: 0.25em;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--color-link);
+    text-decoration-thickness: var(--border-thickness);
+    text-decoration-skip: none;
+    text-decoration-skip-ink: none;
+    background: transparent;
+    border-radius: var(--border-radius);
+    cursor: help;
+    transition: background-color var(--animation-speed) var(--animation-bezier);
+  }
+
+  abbr:hover {
+    background: var(--color-highlight);
+    text-decoration-color: var(--color-highlight);
+  }
 }
 
 a abbr {
