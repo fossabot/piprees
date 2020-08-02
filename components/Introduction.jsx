@@ -13,7 +13,7 @@ export default function IntroductionComponent() {
                 🍵
               </span>
             </i>
-            <abbr title="Phillip">Pip</abbr> Rees
+            <abbr title="Pip, short for Phillip">Pip</abbr> Rees
           </a>
         </h1>
         <p id="subtitle">

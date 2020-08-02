@@ -3,6 +3,7 @@
   --color-background-alt: #fff;
   --color-text: #272822;
   --color-selection: #ff6188;
+  --color-highlight: #ffd866;
   --color-link: #75715e;
   --color-header-active: #78dce8;
   --color-link-visited: #ab9df2;
@@ -19,6 +20,7 @@
   --color-background-alt: #373831;
   --color-text: #f8f8f2;
   --color-selection: #ff6188;
+  --color-highlight: #ab9df2;
   --color-link: #a9dc76;
   --color-header-active: #ab9df2;
   --color-link-visited: #ab9df2;
@@ -37,6 +39,7 @@
     --color-background-alt: #fff;
     --color-text: #000;
     --color-selection: #fff;
+    --color-highlight: #fff;
     --color-link: #000;
     --color-link-visited: #272822;
     --color-header-active: #272822;
@@ -173,6 +176,26 @@ input {
   font-style: inherit;
 }
 
+abbr {
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 2px;
+  background: transparent;
+  cursor: help;
+  transition: background-color 0.2s ease-out;
+}
+
+abbr:hover {
+  color: var(--color-text);
+  background: var(--color-highlight);
+  text-decoration-color: var(--color-highlight);
+}
+
+a abbr {
+  text-decoration: inherit;
+}
+
 article,
 section {
   margin-top: 2rem;
@@ -188,44 +211,35 @@ section {
 
 a {
   color: inherit;
-  outline: 2px solid transparent;
-  transition: outline 0.2s ease-out, color 0.2s ease-out, text-decoration-color 0.2s ease-out;
-}
-
-h1 a,
-h2 a,
-h3 a {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 2px;
-}
-
-ul li a {
-  display: inline-block;
-  color: inherit;
-  font-weight: normal;
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-color: var(--color-link);
   text-decoration-thickness: 2px;
+  outline: 2px solid transparent;
+  transition: outline 0.2s ease-out, color 0.2s ease-out, font-weight 0.2s ease-out, text-decoration 0.2s ease-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-header-active);
+  font-weight: bold;
+  text-decoration-color: var(--color-header-active);
 }
 
 a:focus {
   outline: 2px solid var(--color-link-focus);
 }
 
-a:visited {
-  text-decoration-color: transparent;
+h1 a,
+h2 a,
+h3 a {
+  text-decoration-color: #0000;
 }
 
-h1 a:visited,
-h2 a:visited,
-h3 a:visited {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 2px;
+ul li a {
+  display: inline-block;
+  color: inherit;
+  font-weight: normal;
 }
 
 h1,
@@ -266,33 +280,12 @@ h1 + p {
   }
 }
 
-h1 a:hover,
-h1 a:focus,
-h2 a:hover,
-h2 a:focus,
-h3 a:hover,
-h3 a:focus {
-  color: var(--color-header-active);
-  text-decoration-color: var(--color-header-active);
-}
-
 h1 a i,
 h2 a i,
 h3 a i {
   margin-right: 0.3em;
   margin-left: -1em;
-  color: var(--color-link);
   font-size: 0.8em;
-  transition: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
-}
-
-h1 a:hover i,
-h1 a:focus i,
-h2 a:hover i,
-h2 a:focus i,
-h3 a:hover i,
-h3 a:focus i {
-  color: var(--color-header-active);
 }
 
 ul {
@@ -320,10 +313,6 @@ ul li + li {
   }
 }
 
-ul li a:visited {
-  text-decoration-color: var(--color-link-active);
-}
-
 @media print {
   ul li a {
     font-weight: bold;
@@ -345,6 +334,5 @@ ul li a:hover,
 ul li a:focus,
 ul li a:focus-within {
   color: var(--color-link-active);
-  font-weight: bold;
   text-decoration-color: var(--color-link-active);
 }
