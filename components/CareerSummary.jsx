@@ -44,7 +44,7 @@ export default function CareerSummaryComponent() {
           </p>
           <p>
             Before that, I helped small business clients to create easy to
-            manage websites using WordPress and got to flex both my design and
+            manage websites using WordPress, and got to flex both my design and
             development skills creating custom themes to their specifications.
           </p>
         </Summary>
