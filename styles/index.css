@@ -209,6 +209,16 @@ section {
   }
 }
 
+i {
+  display: block;
+  float: left;
+  width: 1em;
+  margin-right: 0.5em;
+  margin-left: -1.5em;
+  overflow: hidden;
+  text-align: right;
+}
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -278,14 +288,6 @@ h1 + p {
     letter-spacing: 1px;
     content: 'https://piprees.dev/';
   }
-}
-
-h1 a i,
-h2 a i,
-h3 a i {
-  margin-right: 0.3em;
-  margin-left: -1em;
-  font-size: 0.8em;
 }
 
 ul {
