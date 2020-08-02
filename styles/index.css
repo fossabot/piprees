@@ -3,7 +3,7 @@
   --color-background-alt: #fff;
   --color-text: #272822;
   --color-selection: #ff6188;
-  --color-highlight: #ffd866;
+  --color-highlight: #fc9867;
   --color-link: #75715e;
   --color-header-active: #78dce8;
   --color-link-visited: #ab9df2;
@@ -12,7 +12,7 @@
   --color-button-clickable: #78dce8;
   --color-button-active: #ff6188;
   --color-button-border-clickable: #a9dc7600;
-  --color-button-border-active: #ff6188ff;
+  --color-button-border-active: #fc9867ff;
 }
 
 .theme-dark {
@@ -29,7 +29,7 @@
   --color-button-clickable: #a9dc76;
   --color-button-active: #ffd866;
   --color-button-border-clickable: #a9dc7600;
-  --color-button-border-active: #ffd866ff;
+  --color-button-border-active: #fc9867ff;
 }
 
 @media print, monochrome, (light-level: washed) {
@@ -335,11 +335,4 @@ ul li + li {
     letter-spacing: 1px;
     content: attr(href);
   }
-}
-
-ul li a:hover,
-ul li a:focus,
-ul li a:focus-within {
-  color: var(--color-link-active);
-  text-decoration-color: var(--color-link-active);
 }

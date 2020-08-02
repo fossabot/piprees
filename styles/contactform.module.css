@@ -6,13 +6,13 @@
   padding: 2rem;
   text-align: center;
   background: var(--color-background-alt);
-  border: 1px dashed var(--color-button-border-clickable);
+  border: 2px dashed var(--color-button-border-clickable);
   border-radius: 0.3rem;
   transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
 
 .Form:focus-within {
-  border: 1px dashed var(--color-button-border-active);
+  border: 2px dashed var(--color-button-border-active);
 }
 
 @media (min-width: 42em) {
@@ -56,10 +56,9 @@
   padding: 1rem;
   color: var(--color-text);
   background: var(--color-background);
-  border: 1px solid var(--color-background);
+  border: 2px solid var(--color-background);
   border-radius: 0.3rem;
-  box-shadow: inset 0 0 0 2px var(--color-background);
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .Form textarea {
@@ -70,10 +69,9 @@
   overflow-y: auto;
   color: var(--color-text);
   background: var(--color-background);
-  border: 1px solid var(--color-background);
+  border: 2px solid var(--color-background);
   border-radius: 0.3rem;
-  box-shadow: inset 0 0 0 2px var(--color-background);
-  transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out;
   resize: none;
 }
 
@@ -85,17 +83,15 @@
 
 .Form input:hover,
 .Form input:focus {
-  border: 1px solid #78dce8;
+  border: 2px solid #78dce8;
   outline: none;
-  box-shadow: inset 0 0 0 2px #78dce8;
   transform: scale(1.025);
 }
 
 .Form textarea:hover,
 .Form textarea:focus {
-  border: 1px solid #ff6188;
+  border: 2px solid #ff6188;
   outline: none;
-  box-shadow: inset 0 0 0 2px #ff6188;
   transform: scale(1.025);
 }
 
@@ -105,17 +101,16 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   background: #ffd866;
-  border: 1px solid #ffd866;
+  border: 2px solid #ffd866;
   border-radius: 0.3rem;
-  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  transition: border-color 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .Form button:hover,
 .Form button:active,
 .Form button:focus {
-  border: 1px solid #a9dc76;
+  border: 2px solid #a9dc76;
   outline: none;
-  box-shadow: inset 0 0 0 2px #a9dc76;
   transform: scale(1.025);
 }
 
