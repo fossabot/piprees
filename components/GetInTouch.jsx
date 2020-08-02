@@ -1,4 +1,4 @@
-import Icon from '../util/icon.jsx'
+import Icon from '../util/Icon.jsx'
 
 import {
   faLinkedin,
