@@ -32,7 +32,7 @@
 }
 
 .Inner > li:last-of-type > a {
-  text-decoration-color: var(--color-header-active);
+  text-decoration-color: var(--color-link);
 }
 
 .Inner > li:last-of-type > a:hover,

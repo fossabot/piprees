@@ -1,3 +1,14 @@
+import Icon from '../util/icon.jsx'
+
+import {
+  faLinkedin,
+  faBehance,
+  faGithub,
+  faDev,
+  faTwitter,
+  faAngellist,
+} from '@fortawesome/free-brands-svg-icons'
+
 import Blocks from '../styles/blocks.module.css'
 import { hrefClicked } from '../util/analytics.js'
 import ContactForm from './ContactForm.jsx'
@@ -43,6 +54,7 @@ export default function GetInTouchComponent() {
                 href="https://www.linkedin.com/in/piprees"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faLinkedin} />
                 LinkedIn
               </a>
             </li>
@@ -51,6 +63,7 @@ export default function GetInTouchComponent() {
                 href="https://www.behance.net/piprees"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faBehance} />
                 Behance
               </a>
             </li>
@@ -59,6 +72,7 @@ export default function GetInTouchComponent() {
                 href="https://github.com/piprees"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faGithub} />
                 GitHub
               </a>
             </li>
@@ -67,6 +81,7 @@ export default function GetInTouchComponent() {
                 href="https://dev.to/piprees"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faDev} />
                 dev.to
               </a>
             </li>
@@ -75,6 +90,7 @@ export default function GetInTouchComponent() {
                 href="https://twitter.com/piprees"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faTwitter} />
                 Twitter
               </a>
             </li>
@@ -112,6 +128,7 @@ export default function GetInTouchComponent() {
                 href="https://my.indeed.com/p/phillipr-epg4jlw"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={'indeed'} />
                 Indeed
               </a>
             </li>
@@ -120,6 +137,7 @@ export default function GetInTouchComponent() {
                 href="https://www.behance.net/piprees/resume"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faBehance} />
                 Behance
               </a>
             </li>
@@ -128,6 +146,7 @@ export default function GetInTouchComponent() {
                 href="https://angel.co/u/piprees"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={faAngellist} />
                 Angel.co
               </a>
             </li>
@@ -136,6 +155,7 @@ export default function GetInTouchComponent() {
                 href="https://landing.jobs/profile/345c013471af4ae8144475"
                 rel="nofollow noreferrer"
                 onClick={hrefClicked}>
+                <Icon icon={'landingjobs'} />
                 Landing.jobs
               </a>
             </li>
