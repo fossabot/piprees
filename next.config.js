@@ -1,7 +1,8 @@
 const withOffline = require('next-offline')
 const withPrefresh = require('@prefresh/next')
 
-const CACHE_TIME = 28 * 24 * 60 * 60
+const CACHE_TIME = 24 * 60 * 60
+const NETWORK_TIME = 3
 
 const nextConfig = {
   target: 'serverless',
@@ -11,14 +12,54 @@ const nextConfig = {
     swDest: 'static/service-worker.js',
     skipWaiting: true,
     clientsClaim: true,
+    cleanupOutdatedCaches: true,
     runtimeCaching: [
       {
+        urlPattern: /^https:\/\/api\.statickit.com.com\/.*/,
+        handler: 'NetworkOnly',
+      },
+      {
         urlPattern: /^https:\/\/piprees\.dev\/.*/,
-        handler: 'StaleWhileRevalidate',
+        handler: 'CacheFirst',
         options: {
-          cacheName: 'https-calls',
+          cacheName: 'self-calls',
           expiration: {
-            maxEntries: 20,
+            maxEntries: 40,
+            maxAgeSeconds: CACHE_TIME,
+          },
+          cacheableResponse: {
+            statuses: [200],
+          },
+        },
+      },
+      {
+        urlPattern: /^https:\/\/x\.toastedanalytics.com\/.*/,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'toasted-calls',
+          expiration: {
+            maxEntries: 1,
+            maxAgeSeconds: CACHE_TIME,
+          },
+          cacheableResponse: {
+            statuses: [200],
+          },
+        },
+      },
+      {
+        urlPattern: /^https:\/\/cdn\.toastedanalytics.com\/.*/,
+        handler: 'NetworkFirst',
+        options: {
+          backgroundSync: {
+            name: 'analytics-sync',
+            options: {
+              maxRetentionTime: CACHE_TIME,
+            },
+          },
+          cacheName: 'analytics-calls',
+          networkTimeoutSeconds: NETWORK_TIME,
+          expiration: {
+            maxEntries: 12,
             maxAgeSeconds: CACHE_TIME,
           },
           cacheableResponse: {
@@ -36,7 +77,7 @@ const nextConfig = {
       const test = /[\\/]node_modules[\\/](preact|preact-render-to-string|preact-context-provider)[\\/]/
       if (cacheGroups.framework) {
         cacheGroups.preact = Object.assign({}, cacheGroups.framework, { test })
-        cacheGroups.commons.name = 'framework';
+        cacheGroups.commons.name = 'framework'
       }
     }
 
