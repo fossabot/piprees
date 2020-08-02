@@ -1,7 +1,16 @@
 :root {
+  /* Utilities */
+  --border-radius: 0.3rem;
+  --border-thickness: 0.125rem;
+  --text-spacing: 0.063rem;
+  --animation-speed: 200ms;
+  --animation-bezier: ease-out;
+
+  /* Colours */
   --color-background: #f8f8f2;
   --color-background-alt: #fff;
   --color-text: #272822;
+  --color-hint: #75715e;
   --color-selection: #ff6188;
   --color-highlight: #fc9867;
   --color-link: #75715e;
@@ -19,9 +28,10 @@
   --color-background: #272822;
   --color-background-alt: #373831;
   --color-text: #f8f8f2;
+  --color-hint: #c9c4ac;
   --color-selection: #ff6188;
   --color-highlight: #ab9df2;
-  --color-link: #a9dc76;
+  --color-link: #75715e;
   --color-header-active: #ab9df2;
   --color-link-visited: #ab9df2;
   --color-link-active: #78dce8;
@@ -38,6 +48,7 @@
     --color-background: #fff;
     --color-background-alt: #fff;
     --color-text: #000;
+    --color-hint: #75715e;
     --color-selection: #fff;
     --color-highlight: #fff;
     --color-link: #000;
@@ -70,7 +81,7 @@
 }
 
 [tabindex=-1] {
-  outline: 2px solid transparent;
+  outline: var(--border-thickness) solid transparent;
 }
 
 html {
@@ -78,7 +89,6 @@ html {
   height: -webkit-fill-available;
   margin: 0;
   padding: 0;
-  font-size: 16px;
 }
 
 body {
@@ -106,14 +116,14 @@ body {
     "Segoe UI Symbol";
   line-height: 1.618rem;
   background: var(--color-background);
-  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  transition: background-color var(--animation-speed) var(--animation-bezier), color var(--animation-speed) var(--animation-bezier);
   font-variant-ligatures: common-ligatures;
 }
 
 ::selection {
   color: white;
   background: var(--color-selection);
-  transition: background-color 0.2s ease-out;
+  transition: background-color var(--animation-speed) var(--animation-bezier);
 }
 
 blockquote,
@@ -180,10 +190,10 @@ abbr {
   text-decoration: underline;
   text-decoration-style: double;
   text-decoration-color: var(--color-link);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--border-thickness);
   background: transparent;
   cursor: help;
-  transition: background-color 0.2s ease-out;
+  transition: background-color var(--animation-speed) var(--animation-bezier);
 }
 
 abbr:hover {
@@ -214,6 +224,7 @@ i {
   margin-right: 0.5em;
   margin-left: -1.5em;
   overflow: hidden;
+  font-size: 0.8em;
   text-align: right;
 }
 
@@ -229,9 +240,9 @@ a {
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-color: var(--color-link);
-  text-decoration-thickness: 2px;
-  outline: 2px solid transparent;
-  transition: outline 0.2s ease-out, color 0.2s ease-out, font-weight 0.2s ease-out, text-decoration 0.2s ease-out;
+  text-decoration-thickness: var(--border-thickness);
+  outline: var(--border-thickness) solid transparent;
+  transition: outline var(--animation-speed) var(--animation-bezier), color var(--animation-speed) var(--animation-bezier), font-weight var(--animation-speed) var(--animation-bezier), text-decoration var(--animation-speed) var(--animation-bezier);
 }
 
 a:hover,
@@ -242,13 +253,23 @@ a:focus {
 }
 
 a:focus {
-  outline: 2px solid var(--color-link-focus);
+  outline: var(--border-thickness) solid var(--color-link-focus);
 }
 
 h1 a,
 h2 a,
 h3 a {
   text-decoration-color: #0000;
+}
+
+h1 a:hover,
+h1 a:focus,
+h2 a:hover,
+h2 a:focus,
+h3 a:hover,
+h3 a:focus {
+  color: var(--color-link-active);
+  text-decoration-color: var(--color-link-active);
 }
 
 ul li a {
@@ -287,10 +308,10 @@ h1 + p {
 @media print {
   h1 + p::after {
     display: block;
-    margin-top: 12px;
+    margin-top: 1rem;
     font-size: 1rem;
     font-style: normal;
-    letter-spacing: 1px;
+    letter-spacing: var(--text-spacing);
     content: 'https://piprees.dev/';
   }
 }
@@ -332,7 +353,7 @@ ul li + li {
     font-size: 1rem;
     font-style: normal;
     line-height: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: var(--text-spacing);
     content: attr(href);
   }
 }

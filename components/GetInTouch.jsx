@@ -26,7 +26,7 @@ export default function GetInTouchComponent() {
         </div>
       </section>
       <section class={Blocks.Container}>
-        <div class={Blocks.ColumnHalf}>
+        <div class={Blocks.ColumnThin}>
           <h3 id="hangouts">
             <a href="#hangouts" onClick={hrefClicked}>
               <i>
@@ -80,7 +80,8 @@ export default function GetInTouchComponent() {
             </li>
           </ul>
         </div>
-        <div class={Blocks.ColumnHalf}>
+
+        <div class={Blocks.ColumnThin}>
           <h3 id="recruiting">
             <a href="#recruiting" onClick={hrefClicked}>
               <i>

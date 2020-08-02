@@ -30,15 +30,15 @@
   color: var(--color-button-clickable);
   font-size: 2rem;
   text-align: right;
-  border: 1px dashed transparent;
-  border-radius: 0.3rem;
-  transition: color 0.2s ease-out, border-color 0.2s ease-out;
+  border: var(--border-thickness) dashed transparent;
+  border-radius: var(--border-radius);
+  transition: color var(--animation-speed) var(--animation-bezier), border-color var(--animation-speed) var(--animation-bezier);
   content: "+";
 }
 
 @media screen and (pointer) and (hover: hover) {
   .TabLabel::after {
-    border: 1px dashed var(--color-button-border-clickable);
+    border: var(--border-thickness) dashed var(--color-button-border-clickable);
   }
 }
 
@@ -46,7 +46,7 @@
   .TabLabel:hover::after,
   .Tab input:focus + .TabLabel::after {
     color: var(--color-button-active);
-    border: 1px dashed var(--color-button-border-active);
+    border: var(--border-thickness) dashed var(--color-button-border-active);
     animation: bouncepadding 0.5s ease-in-out infinite forwards;
   }
 }
@@ -61,7 +61,7 @@
   max-height: 0;
   padding: 0 2rem;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height var(--animation-speed) var(--animation-bezier);
 }
 
 @media (min-width: 42em) {

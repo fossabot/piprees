@@ -91,7 +91,7 @@
   }
 
   30% {
-    border: 0.5px double #ff6188;
+    border: var(--border-thickness) double #ff6188;
   }
 
   40% {
@@ -120,7 +120,7 @@
   }
 
   80% {
-    border: 0.5px solid #ff6188;
+    border: var(--border-thickness) solid #ff6188;
   }
 }
 

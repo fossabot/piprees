@@ -6,13 +6,13 @@
   padding: 2rem;
   text-align: center;
   background: var(--color-background-alt);
-  border: 2px dashed var(--color-button-border-clickable);
-  border-radius: 0.3rem;
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  border: var(--border-thickness) dashed var(--color-button-border-clickable);
+  border-radius: var(--border-radius);
+  transition: background-color var(--animation-speed) var(--animation-bezier), border-color var(--animation-speed) var(--animation-bezier);
 }
 
 .Form:focus-within {
-  border: 2px dashed var(--color-button-border-active);
+  border-color: var(--color-button-border-active);
 }
 
 @media (min-width: 42em) {
@@ -45,9 +45,9 @@
 .Form label {
   position: absolute;
   top: auto;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
+  left: -200vw;
+  width: var(--text-spacing);
+  height: var(--text-spacing);
   overflow: hidden;
 }
 
@@ -56,9 +56,9 @@
   padding: 1rem;
   color: var(--color-text);
   background: var(--color-background);
-  border: 2px solid var(--color-background);
-  border-radius: 0.3rem;
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out;
+  border: var(--border-thickness) solid var(--color-background);
+  border-radius: var(--border-radius);
+  transition: background-color var(--animation-speed) var(--animation-bezier), color var(--animation-speed) var(--animation-bezier), border-color var(--animation-speed) var(--animation-bezier), transform var(--animation-speed) var(--animation-bezier);
 }
 
 .Form textarea {
@@ -69,48 +69,48 @@
   overflow-y: auto;
   color: var(--color-text);
   background: var(--color-background);
-  border: 2px solid var(--color-background);
-  border-radius: 0.3rem;
-  transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out;
+  border: var(--border-thickness) solid var(--color-background);
+  border-radius: var(--border-radius);
+  transition: background-color var(--animation-speed) var(--animation-bezier), color var(--animation-speed) var(--animation-bezier), border-color var(--animation-speed) var(--animation-bezier), transform var(--animation-speed) var(--animation-bezier);
   resize: none;
 }
 
 .Form input::placeholder,
 .Form textarea::placeholder {
   color: var(--color-text);
-  transition: color 0.2s ease-out;
+  transition: color var(--animation-speed) var(--animation-bezier);
 }
 
 .Form input:hover,
 .Form input:focus {
-  border: 2px solid #78dce8;
-  outline: none;
+  border-color: #78dce8;
+  outline: var(--border-thickness) solid transparent;
   transform: scale(1.025);
 }
 
 .Form textarea:hover,
 .Form textarea:focus {
-  border: 2px solid #ff6188;
-  outline: none;
+  border-color: #ff6188;
+  outline: var(--border-thickness) solid transparent;
   transform: scale(1.025);
 }
 
 .Form button {
   margin-top: 1rem;
   line-height: 3rem;
-  letter-spacing: 1px;
+  letter-spacing: var(--text-spacing);
   text-transform: uppercase;
   background: #ffd866;
-  border: 2px solid #ffd866;
-  border-radius: 0.3rem;
-  transition: border-color 0.2s ease-out, transform 0.2s ease-out;
+  border: var(--border-thickness) solid #ffd866;
+  border-radius: var(--border-radius);
+  transition: border-color var(--animation-speed) var(--animation-bezier), transform var(--animation-speed) var(--animation-bezier);
 }
 
 .Form button:hover,
 .Form button:active,
 .Form button:focus {
-  border: 2px solid #a9dc76;
-  outline: none;
+  border-color: #a9dc76;
+  outline: var(--border-thickness) solid transparent;
   transform: scale(1.025);
 }
 
@@ -123,7 +123,7 @@
 
 .Saved {
   float: right;
-  color: var(--color-link);
+  color: var(--color-hint);
   font-size: 0.8rem;
   font-style: italic;
 }

@@ -22,13 +22,13 @@
   width: 100%;
 }
 
-.ColumnHalf {
+.ColumnThin {
   flex: 1;
   min-width: 100%;
 }
 
 @media (min-width: 42em) {
-  .ColumnHalf {
+  .ColumnThin {
     width: 50%;
     min-width: 50%;
     max-width: 50%;
@@ -36,7 +36,7 @@
 }
 
 @media print {
-  .ColumnHalf {
+  .ColumnThin {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -44,11 +44,11 @@
 }
 
 @media (min-width: 42em) {
-  .ColumnHalf ul {
+  .ColumnThin ul {
     padding-left: 0;
   }
 
-  .ColumnHalf ul li {
+  .ColumnThin ul li {
     list-style-type: none;
   }
 }
