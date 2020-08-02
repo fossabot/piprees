@@ -12,6 +12,7 @@ export default function Index() {
     <main>
       <Head>
         <meta charSet="utf-8" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="dns-prefetch" href="https://x.toastedanalytics.com" />
         <link rel="dns-prefetch" href="https://cdn.toastedanalytics.com" />
@@ -29,6 +30,7 @@ export default function Index() {
           href="https://x.toastedanalytics.com/bundle.js"
         />
         <title>Pip Rees | UI Designer & Front-End Developer</title>
+        <link rel="canonical" href="http://piprees.dev" />
         <meta
           name="description"
           content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink."
@@ -38,11 +40,19 @@ export default function Index() {
           property="og:title"
           content="Pip Rees | UI Designer & Front-End Developer"
         />
+        <meta
+          property="og:site_name"
+          content="Pip Rees | UI Designer & Front-End Developer"
+        />
         <meta property="og:url" content="https://piprees.dev" />
         <meta property="og:image" content="/avatar.jpg" />
-        <meta property="profile:first_name" content="Phillip" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="profile:username" content="piprees" />
+        <meta property="profile:first_name" content="Pip" />
         <meta property="profile:last_name" content="Rees" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@piprees" />
         <meta name="twitter:site" content="@piprees" />
         <meta
           name="twitter:title"
@@ -52,7 +62,7 @@ export default function Index() {
           name="twitter:description"
           content="I've worked for local, government, and international clients developing solutions with code, pixels, and ink."
         />
-        <meta name="twitter:image" content="/avatar.jpg" />
+        <meta name="twitter:image" content="https://piprees.dev/avatar.jpg" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link
           rel="icon"
