@@ -44,7 +44,7 @@ function LandingJobs() {
         data-icon="landingjobs"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 49 42">
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
           <path
             fill="currentColor"
             d="M41.176 26.25c1.208 0 2.347.283 3.367.774.295-1.295.457-2.64.457-4.024 0-9.941-8.061-18-18.006-18-1.267 0-2.504.132-3.697.38 2.94 4.729 2.36 11.022-1.746 15.128A12.258 12.258 0 019 23.466C9.249 33.19 17.206 41 26.994 41c2.96 0 5.749-.718 8.212-1.982a7.78 7.78 0 015.97-12.768"
