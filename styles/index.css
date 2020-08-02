@@ -210,13 +210,18 @@ section {
 }
 
 i {
-  display: block;
-  float: left;
   width: 1em;
   margin-right: 0.5em;
   margin-left: -1.5em;
   overflow: hidden;
   text-align: right;
+}
+
+@media (min-width: 42em) {
+  i {
+    display: block;
+    float: left;
+  }
 }
 
 a {
