@@ -15,7 +15,7 @@ const nextConfig = {
     cleanupOutdatedCaches: true,
     runtimeCaching: [
       {
-        urlPattern: /^https:\/\/api\.statickit.com.com\/.*/,
+        urlPattern: /^https:\/\/api\.statickit\.com\/.*/,
         handler: 'NetworkOnly',
       },
       {
@@ -33,7 +33,7 @@ const nextConfig = {
         },
       },
       {
-        urlPattern: /^https:\/\/x\.toastedanalytics.com\/.*/,
+        urlPattern: /^https:\/\/x\.toastedanalytics\.com\/.*/,
         handler: 'CacheFirst',
         options: {
           cacheName: 'toasted-calls',
@@ -47,7 +47,7 @@ const nextConfig = {
         },
       },
       {
-        urlPattern: /^https:\/\/cdn\.toastedanalytics.com\/.*/,
+        urlPattern: /^https:\/\/cdn\.toastedanalytics\.com\/.*/,
         handler: 'NetworkFirst',
         options: {
           backgroundSync: {
@@ -63,7 +63,7 @@ const nextConfig = {
             maxAgeSeconds: CACHE_TIME,
           },
           cacheableResponse: {
-            statuses: [200],
+            statuses: [0, 200],
           },
         },
       },
