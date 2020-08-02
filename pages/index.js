@@ -45,7 +45,7 @@ export default function Index() {
           content="Pip Rees | UI Designer & Front-End Developer"
         />
         <meta property="og:url" content="https://piprees.dev" />
-        <meta property="og:image" content="/avatar.jpg" />
+        <meta property="og:image" content="https://piprees.dev/avatar.jpg" />
         <meta property="og:type" content="profile" />
         <meta property="og:locale" content="en_GB" />
         <meta property="profile:username" content="piprees" />
@@ -91,13 +91,13 @@ export default function Index() {
           src="https://x.toastedanalytics.com/bundle.js"
         />
       </Head>
+      <LightSwitch />
       <Animation />
       <Introduction />
       <CareerSummary />
       <KeyKnowledgeAreas />
       <GetInTouch />
       <Footer />
-      <LightSwitch />
     </main>
   )
 }
