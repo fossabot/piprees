@@ -7,8 +7,6 @@ import GetInTouch from '../components/GetInTouch.jsx'
 import Footer from '../components/Footer.jsx'
 import Head from 'next/head'
 
-export const config = { amp: 'hybrid' }
-
 const microData = `
   {
     "@context": "https://schema.org/",
