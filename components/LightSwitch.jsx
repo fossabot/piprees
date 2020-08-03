@@ -48,7 +48,7 @@ export default function LightSwitchComponent() {
   }
 
   return (
-    <div class={LightSwitch.Wrapper}>
+    <div class={LightSwitch.Wrapper} data-nosnippet>
       <button
         type="button"
         class={LightSwitch.Toggle}

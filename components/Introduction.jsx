@@ -17,10 +17,10 @@ export default function IntroductionComponent() {
           </a>
         </h1>
         <p id="subtitle">
+          Front-End Developer &amp;{' '}
           <em>
             <abbr title="User Interface">UI</abbr> Designer
-          </em>{' '}
-          &amp; Front-End Developer
+          </em>
         </p>
         <Summary
           id="intro"

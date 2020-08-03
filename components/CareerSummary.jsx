@@ -39,7 +39,7 @@ export default function CareerSummaryComponent() {
             In my previous role at CDSM, I worked to tight deadlines for
             demanding clients like Hwb, Mitsubishi, and Boots to create bespoke,
             professional E-Learning experiences and admin dashboards. I was
-            hired as a Graphic Designer, became an E-Learning UI designer, and
+            hired as a Graphic Designer, became an E-Learning UI Designer, and
             worked my way up to Front-End Developer.
           </p>
           <p>

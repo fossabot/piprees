@@ -1,6 +1,6 @@
 # Pip Rees
 
-UI Designer & Front-End Developer
+Front-End Developer & UI Designer
 
 I've worked for local, government, and international clients developing
 solutions with code, pixels, and ink.

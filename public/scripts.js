@@ -1,4 +1,14 @@
-window._TOASTED_ID = '9a0e0776-a69c-4241-8d47-fd4b1877fbb2'
+"use strict";
+window.setupToasted = function () {
+  window._TOASTED_ID = '9a0e0776-a69c-4241-8d47-fd4b1877fbb2'
+
+  var toastedScript = document.createElement('script')
+  toastedScript.type = 'text/javascript'
+  toastedScript.src = 'https://x.toastedanalytics.com/bundle.js'
+  toastedScript.defer = true
+  toastedScript.async = true
+  document.head.appendChild(toastedScript)
+}
 
 window.logJSError = function (error) {
   if (
@@ -19,3 +29,4 @@ window.logJSError = function (error) {
 }
 
 window.addEventListener('error', window.logJSError)
+window.addEventListener('load', window.setupToasted)
