@@ -6,7 +6,6 @@ import KeyKnowledgeAreas from '../components/KeyKnowledgeAreas.jsx'
 import GetInTouch from '../components/GetInTouch.jsx'
 import Footer from '../components/Footer.jsx'
 import Head from 'next/head'
-import { useAmp } from 'next/amp'
 
 export const config = { amp: 'hybrid' }
 
@@ -36,16 +35,17 @@ const microData = `
 `
 
 export default function Index() {
-  const isAmp = useAmp()
-
   return (
     <main>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="robots" content="index, follow" />
+        <meta
+          name="robots"
+          content="index, follow, noarchive, max-image-preview:large"
+        />
         <meta
           name="viewport"
-          content="initial-scale=1.0, width=device-width, noarchive, max-image-preview:large"
+          content="width=device-width,minimum-scale=1,initial-scale=1"
         />
         <link rel="dns-prefetch" href="https://x.toastedanalytics.com" />
         <link rel="dns-prefetch" href="https://cdn.toastedanalytics.com" />
@@ -120,12 +120,8 @@ export default function Index() {
           integrity="sha384-EBZNB8JCUL4ESwWmMLnUXME4VirnPndrQ2maUDGrT2ytwSQEEiUJKQyZWhzJYB/U"
         />
       </Head>
-      {!isAmp ? (
-        <>
-          <LightSwitch />
-          <Animation />
-        </>
-      ) : null}
+      <LightSwitch />
+      <Animation />
       <Introduction />
       <CareerSummary />
       <KeyKnowledgeAreas />
