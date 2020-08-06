@@ -1,0 +1,53 @@
+.Row {
+  position: relative;
+  display: flex;
+  height: max(61.8vh, 23em);
+  padding: 0;
+  padding-right: calc(var(--border-thickness) * 2);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.Row > * {
+  display: block;
+  flex: none;
+  width: 23em;
+  width: min(70vw, 23em);
+  height: 100%;
+  overflow: hidden;
+  color: var(--color-background);
+  background: var(--color-hint);
+  border-radius: var(--border-radius);
+}
+
+.Row > a {
+  display: block;
+  width: 23em;
+  width: min(70vw, 23em);
+  height: 100%;
+  color: var(--color-background);
+  font-weight: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Row > a > img {
+  width: auto;
+  height: 100%;
+  object-fit: cover center;
+}
+
+.Row > a > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 2rem;
+}
+
+.Row > aside {
+  padding: 1.5rem 2rem;
+}
+
+.Row > * + * {
+  margin-left: calc(var(--border-thickness) * 2);
+}

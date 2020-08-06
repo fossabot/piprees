@@ -11,7 +11,7 @@ import {
 
 import Blocks from '../styles/blocks.module.css'
 import { hrefClicked } from '../util/analytics.js'
-import ContactForm from './ContactForm.jsx'
+import ContactForm from '../components/ContactForm.jsx'
 
 export default function GetInTouchComponent() {
   return (

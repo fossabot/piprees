@@ -2,14 +2,13 @@ import { useForm, ValidationError } from '@statickit/react'
 import { useState, useEffect } from 'react'
 import useStorage from '../util/useStorage.js'
 import { contactFormClicked } from '../util/analytics.js'
+import Blocks from '../styles/blocks.module.css'
 import ContactForm from '../styles/contactform.module.css'
 
 export default function ContactFormComponent() {
   const [, setHasMounted] = useState(false)
 
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
+  useEffect(() => setHasMounted(true), [])
 
   const [state, handleSubmit] = useForm('contactForm')
   const [submitted, handleSubmitted] = useStorage(
@@ -28,7 +27,8 @@ export default function ContactFormComponent() {
     handleSubmitted(true)
     return (
       <aside>
-        <div class={`${ContactForm.Form} ${ContactForm.Confirmed}`}>
+        <div
+          class={`${Blocks.Panel} ${ContactForm.Form} ${ContactForm.Confirmed}`}>
           <h3>
             <i>
               <span role="img" aria-label="Woohoo!">
@@ -48,7 +48,9 @@ export default function ContactFormComponent() {
 
   return (
     <aside>
-      <form class={ContactForm.Form} onSubmit={handleSubmit}>
+      <form
+        class={`${Blocks.Panel} ${ContactForm.Form}`}
+        onSubmit={handleSubmit}>
         <h3>
           Message me{' '}
           {storedEmail || storedContent ? (

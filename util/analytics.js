@@ -30,8 +30,8 @@ export function linkClicked(id, url) {
   }
 }
 
-export function hrefClicked(event) {
-  linkClicked(event.target.textContent, event.target.href)
+export function hrefClicked(event, title) {
+  linkClicked(title || event.target.textContent, event.target.href)
 }
 
 export function summaryClicked(id) {

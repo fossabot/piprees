@@ -1,6 +1,5 @@
 const withOffline = require('next-offline')
 const withPrefresh = require('@prefresh/next')
-
 const CACHE_TIME = 24 * 60 * 60
 const NETWORK_TIME = 3
 

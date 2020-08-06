@@ -52,3 +52,26 @@
     list-style-type: none;
   }
 }
+
+.Panel {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: var(--color-background-alt);
+  border: var(--border-thickness) dashed var(--color-button-border-clickable);
+  border-radius: var(--border-radius);
+  transition: background-color var(--animation-speed) var(--animation-bezier), border-color var(--animation-speed) var(--animation-bezier);
+}
+
+@media (min-width: 42em) {
+  .Panel {
+    text-align: left;
+  }
+}
+
+.Panel:focus-within {
+  border-color: var(--color-button-border-active);
+}

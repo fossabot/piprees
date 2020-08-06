@@ -1,7 +1,7 @@
 import { differenceInYears } from 'date-fns'
 
 import Blocks from '../styles/blocks.module.css'
-import Summary from './Summary.jsx'
+import Summary from '../components/Summary.jsx'
 import { hrefClicked } from '../util/analytics.js'
 
 export default function CareerSummaryComponent() {

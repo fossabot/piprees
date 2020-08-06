@@ -1,0 +1,44 @@
+.List {
+  margin: 0;
+  padding: 0;
+}
+
+.ListItem {
+  margin: 0;
+  padding: 0;
+  border-top: var(--border-thickness) solid transparent;
+}
+
+.ListItem + .ListItem {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: var(--border-thickness) solid var(--color-hint);
+}
+
+.ListItem > h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4em;
+}
+
+.ListItem > span {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.ListItem > img {
+  display: block;
+  width: 100%;
+  height: 23em;
+  height: min(61.8vh, 23em);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  color: var(--color-background);
+  background: var(--color-hint);
+  border-radius: var(--border-radius);
+}
+
+.ListItem > a {
+  display: block;
+}
