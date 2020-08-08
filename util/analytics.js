@@ -11,6 +11,9 @@ const themeToggleClickedStatus = {
   dark: false,
 }
 
+let didAlreadyScroll = false
+let didAlreadyRead = false
+
 export function contactFormClicked(id) {
   try {
     if (contactFormClickedStatus[id] === false) {
@@ -50,6 +53,28 @@ export function themeToggleClicked(mode) {
     if (themeToggleClickedStatus[mode] === false) {
       themeToggleClickedStatus[mode] = true
       window.toastedAnalytics.emit('themeToggleClicked', { mode })
+    }
+  } catch (error) {
+    console.warn('Analytics:themeToggleClicked', error)
+  }
+}
+
+export function didScroll() {
+  try {
+    if (didAlreadyScroll === false) {
+      didAlreadyScroll = true
+      window.toastedAnalytics.emit('didScroll')
+    }
+  } catch (error) {
+    console.warn('Analytics:themeToggleClicked', error)
+  }
+}
+
+export function didRead() {
+  try {
+    if (didAlreadyRead === false) {
+      didAlreadyRead = true
+      window.toastedAnalytics.emit('didRead')
     }
   } catch (error) {
     console.warn('Analytics:themeToggleClicked', error)

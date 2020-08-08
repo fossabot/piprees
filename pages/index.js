@@ -7,6 +7,8 @@ import GetInTouch from '../components/GetInTouch.jsx'
 import Footer from '../components/Footer.jsx'
 import Head from 'next/head'
 
+import { didScroll, didRead } from '../util/analytics.js'
+
 const microData = `
   {
     "@context": "https://schema.org/",
@@ -31,8 +33,25 @@ const microData = `
     ]
   }
 `
-
+let didReadTimeout
 export default function Index() {
+  if (process.browser) {
+    try {
+      const trackDidScroll = () => {
+        if (window.scrollY >= window.document.body.clientHeight / 3) {
+          window.removeEventListener('scroll', trackDidScroll)
+          didScroll()
+        }
+      }
+
+      window.addEventListener('scroll', trackDidScroll, { passive: true })
+      clearTimeout(didReadTimeout)
+      didReadTimeout = setTimeout(() => didRead(), 30000)
+    } catch (error) {
+      console.warn(error)
+    }
+  }
+
   return (
     <main>
       <Head>
@@ -56,7 +75,6 @@ export default function Index() {
           integrity="sha384-EBZNB8JCUL4ESwWmMLnUXME4VirnPndrQ2maUDGrT2ytwSQEEiUJKQyZWhzJYB/U"
         />
         <link rel="canonical" href="https://piprees.dev" />
-        <base href="https://piprees.dev" target="_self" />
         <title>Pip Rees | Front-End Developer & UI Designer</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link
