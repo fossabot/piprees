@@ -10,7 +10,28 @@ import Articles from '../sections/Articles.jsx'
 import GetInTouch from '../sections/GetInTouch.jsx'
 import Footer from '../components/Footer.jsx'
 
+import { didScroll, didRead } from '../util/analytics.js'
+
+let didReadTimeout
+
 export default function Index() {
+  if (process.browser) {
+    try {
+      const trackDidScroll = () => {
+        if (window.scrollY >= window.document.body.clientHeight / 3) {
+          window.removeEventListener('scroll', trackDidScroll)
+          didScroll()
+        }
+      }
+
+      window.addEventListener('scroll', trackDidScroll, { passive: true })
+      clearTimeout(didReadTimeout)
+      didReadTimeout = setTimeout(() => didRead(), 30000)
+    } catch (error) {
+      console.warn(error)
+    }
+  }
+
   return (
     <main>
       <HeadMeta />
